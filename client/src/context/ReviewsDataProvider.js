@@ -11,11 +11,21 @@ export const ReviewsDataConsumer = ReviewsDataContext.Consumer
 export class ReviewsDataProvider extends React.Component {
   state = DefaultState
 
+
+  fetch (endpoint) {
+    return window.fetch(endpoint)
+      .then(response => response.json())
+      .catch(error => console.log(error))
+  }
+
   componentDidMount() {
-    fetch('api/reviews')
-      .then(res => res.json())
-      .then(res => {
-        this.setState({ reviewsData: res })
+    this.fetch('/api/reviews')
+      .then(reviewsData => {
+        if (reviewsData.length) {
+          this.setState({reviewsData: reviewsData})
+        } else {
+          this.setState({reviewsData: []})
+        }
       })
   }
 

@@ -11,11 +11,21 @@ export const ProjectsDataConsumer = ProjectsDataContext.Consumer
 export class ProjectsDataProvider extends React.Component {
   state = DefaultState
 
+
+  fetch (endpoint) {
+    return window.fetch(endpoint)
+      .then(response => response.json())
+      .catch(error => console.log(error))
+  }
+
   componentDidMount() {
-    fetch('api/projects')
-      .then(res => res.json())
-      .then(res => {
-        this.setState({ projectsData: res })
+    this.fetch('/api/projects')
+      .then(projectsData => {
+        if (projectsData.length) {
+          this.setState({projectsData: projectsData})
+        } else {
+          this.setState({projectsData: []})
+        }
       })
   }
 
