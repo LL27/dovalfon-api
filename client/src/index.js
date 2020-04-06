@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 
-import 'semantic-ui-css/semantic.css'
-import './index.css'
+
+import { render } from "react-dom";
+
+
+import Root from "./components/root";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );

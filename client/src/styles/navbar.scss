@@ -1,0 +1,56 @@
+@media (min-width: 576px) {
+  .no-ajax-nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+
+
+  }
+}
+
+
+.navbar-lewagon {
+  justify-content: center;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+  .no-ajax-nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+.navbar {
+    //position: fixed;
+    width: 100%;
+    top: -10px;
+    padding-top: 0;
+    padding-bottom: 12px;
+}
+.logo {
+  padding-top: 12px;
+  background: white;
+
+}
+.logo a {
+  font-size: 72px;
+  font-family: $logo-font;
+  color: #292b29;
+  opacity: 1;
+  &:hover {
+    color: #292b29;
+    text-decoration: none;
+  }
+}
+
+.no-ajax-nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  padding: 0.5rem 1rem;
+}
