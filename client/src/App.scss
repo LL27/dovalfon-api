@@ -137,7 +137,8 @@ $font-size-base: 1rem;
   margin: 0 auto;
 }
 
-.scroll_To_Top {
+
+.scroll {
   font-size: 28px;
   display: inline-block;
   width: 50px;
@@ -148,11 +149,14 @@ $font-size-base: 1rem;
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s,
+  transition:
     opacity .5s, visibility .5s;
   opacity: .5;
-  display: none;
   z-index: 1000;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .scroll_To_Top:hover {
@@ -160,7 +164,6 @@ $font-size-base: 1rem;
   opacity: 1;
 }
 .scroll_To_Top:active {
-  background-color: #555;
 }
 .praises {
 
