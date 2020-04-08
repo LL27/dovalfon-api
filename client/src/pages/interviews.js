@@ -1,10 +1,15 @@
-// "home"
 import React from 'react';
 import Article from '../components/article';
+import Filter from '../components/filter';
+
+import LanguageNav from '../components/LanguageNav';
+import { Router } from "@reach/router";
+
 import {
   InterviewsDataProvider,
   InterviewsDataConsumer
 } from '../context/InterviewsDataProvider'
+
 
 const Interviews = () => {
  return (
@@ -12,11 +17,20 @@ const Interviews = () => {
       <InterviewsDataProvider>
         <InterviewsDataConsumer>
 
-          {({ interviewsData }) => (
+          {({ interviewsData, interviewsByLanguage, updateFilter }) => (
+
             <div className="atricle-list d-flex flex-wrap justify-content-around">
-              {interviewsData.map(interview => (
-                <Article article={interview} key={interview.id}/>
-            ))}
+                 <Filter updateFilter={updateFilter}
+                         languages={interviewsData
+            .map(interview => interview.language.split(' ')[0])
+            .filter((item, i, arr) => arr.indexOf(item) === i)}
+                 />
+                {interviewsByLanguage.map(interview => (
+        <Article article={interview} key={interview.id}/>
+    ))}
+
+
+
             </div>
           )}
 
@@ -25,6 +39,7 @@ const Interviews = () => {
     </div>
 )
 };
+
 
 
 

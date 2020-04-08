@@ -13,6 +13,7 @@ const Reviews = () => {
         <ReviewsDataConsumer>
 
           {({ reviewsData }) => (
+
             <div className="atricle-list d-flex flex-wrap justify-content-around">
               {reviewsData.map(review => (
                 <Article article={review} key={review.id}/>

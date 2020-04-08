@@ -34,6 +34,7 @@ export class ReviewsDataProvider extends React.Component {
     return reviewsData.find(article => article.id === Number(articleId))
 }
 
+
   render() {
     const { children } = this.props
     const { reviewsData } = this.state

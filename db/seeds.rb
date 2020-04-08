@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Article.destroy_all
 AdminUser.destroy_all
 
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
@@ -22,7 +24,7 @@ articles = Article.create([
   {title: "Un pays, un auteur: en Israël avec Dov Alfon",
    source: "Radio France Internationale",
   tag: "Interview",
-  language: "French",
+  language: "English",
     media: "audio",
   url: "http://www.rfi.fr/fr/emission/20190712-alfon-dov-israel-roman-unite-8200-redacteur-haaretz"
 },
