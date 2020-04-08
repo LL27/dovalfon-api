@@ -45,11 +45,6 @@ export class InterviewsDataProvider extends React.Component {
     return result
   }
 
-  fetchLanguages = (data) => {
-     const lang = data.map(interview => (Object.values(interview.language).join("")))
-     return [...new Set(lang)];
-
-  }
 
   getInterviewByArticleId = (articleId) => {
     const { interviewsData } = this.state
@@ -70,7 +65,6 @@ export class InterviewsDataProvider extends React.Component {
           interviewsData: interviewsData,
           interviewsByLanguage: filteredInterviews,
           getInterviewByArticleId: this.getInterviewByArticleId,
-          fetchInterviewsByLanguage: this.fetchInterviewsByLanguage,
           updateFilter: this.updateFilter,
         }}
       >

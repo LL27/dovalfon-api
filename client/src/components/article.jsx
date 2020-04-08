@@ -14,7 +14,6 @@ const { id, title, url, source, tag, media } = article
   <div id={id} key={id} className="article">
     <iframe src={url} width="350" height="200" frameBorder="0" allowFullScreen scrolling="no"></iframe>
          {/*<Link to={`/${article.tag.toLowerCase()}s/${article.id}`}></Link>*/}
-
          <h4><Link to={`/${article.tag.toLowerCase()}s/${id}`}>
             {title}
           </Link></h4>
