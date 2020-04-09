@@ -2,7 +2,6 @@ import React from 'react';
 import Article from '../components/article';
 import Filter from '../components/filter';
 
-import LanguageNav from '../components/LanguageNav';
 import { Router } from "@reach/router";
 
 import {

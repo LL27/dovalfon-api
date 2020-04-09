@@ -15,8 +15,12 @@ $font-size-base: 1rem;
 
 
 
-
-
+select {
+  padding: 2px;
+}
+select:focus {
+  outline:none;
+}
 
 .navbar-lewagon {
   justify-content: center;
