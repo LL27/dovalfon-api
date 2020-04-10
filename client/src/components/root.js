@@ -23,6 +23,7 @@ import SingleReview from '../pages/single_review'
 import SingleProject from '../pages/single_project'
 
 
+
 import App from "./app";
 
 
@@ -30,6 +31,7 @@ const Root = () => (
   <Router>
     <App path="/">
       <Home path="/" />
+
        <About path="about" />
        <Projects path="projects" />
           <SingleProject path="/projects/:articleId" />

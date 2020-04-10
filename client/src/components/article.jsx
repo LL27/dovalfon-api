@@ -7,7 +7,9 @@ const Article = ({article}) => {
     return null
   }
 
-const { id, title, url, source, tag, media } = article
+  const { id, title, url, source, tag, photos } = article
+
+
 
   return (
 

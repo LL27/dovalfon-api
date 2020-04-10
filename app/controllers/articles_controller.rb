@@ -3,40 +3,46 @@ class ArticlesController < ApiController
 
   # GET /articles
   def index
-    @articles = Article.all
-
-    render json: @articles
+    @articles = Article.all.with_attached_photos
+   render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
   end
 
   def interviews
-    @articles =Article.where(tag: "Interview")
+    @articles = Article.where(tag: "Interview").with_attached_photos
 
-    render json: @articles
+   render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
+
 
   end
 
   def projects
-    @articles =Article.where(tag: "Project")
+    @articles = Article.where(tag: "Project").with_attached_photos
 
-    render json: @articles
+   render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
+
 
   end
 
   def reviews
-    @articles =Article.where(tag: "Review")
+    @articles = Article.where(tag: "Review").with_attached_photos
 
-    render json: @articles
+   render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
+
 
   end
   # GET /articles/1
   def show
-    render json: @article
+    if @article.photos.attached?
+      render json: @article.as_json.merge({ photos: @article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} })
+    else
+       render json: @article
+     end
   end
 
   # POST /articles
   def create
     @article = Article.new(article_params)
-
+    @article.photos.attach(params[:article][:photos])
     if @article.save
       render json: @article, status: :created, location: @article
     else
@@ -66,6 +72,6 @@ class ArticlesController < ApiController
 
     # Only allow a trusted parameter "white list" through.
     def article_params
-      params.require(:article).permit(:title, :content, :tag, :url, :media, :language, :source)
+      params.require(:article).permit(:title, :content, :tag, :url, :media, :language, :source, photos: [])
     end
 end

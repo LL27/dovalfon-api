@@ -18,6 +18,7 @@ articles = Article.create([
   language: "French",
     media: "video",
   url: "https://www.franceinter.fr/embed/player/aod/fb4abdb7-0f44-47b3-af80-37b5c2a78e9e",
+  photos:
 
 },
 
