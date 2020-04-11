@@ -1,16 +1,17 @@
-import * as React from 'react'
+import React from 'react';
 
 const DefaultState = {
   interviewsData: [],
   filter: {}
 }
 
+
 const InterviewsDataContext = React.createContext(DefaultState)
 
 export const InterviewsDataConsumer = InterviewsDataContext.Consumer
 
 export class InterviewsDataProvider extends React.Component {
-  state = DefaultState
+  state = DefaultState;
 
 
   fetch (endpoint) {

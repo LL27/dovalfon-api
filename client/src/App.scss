@@ -13,6 +13,57 @@ $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $font-size-base: 1rem;
 
+.card {
+  overflow: hidden;
+  border: none;
+  border-radius: 3px;
+  margin: 10px 0px;
+  //background: white;
+  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h4 > a {
+  margin: 0;
+  color: black;
+}
+
+.card p {
+  opacity: .7;
+  margin: 0;
+}
+
+.article-show {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.review-card  {
+  display: block;
+  padding: 25px;
+  width: 100%;
+}
+.review-card .card-infos {
+  padding: 4px;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+.review-card .card-infos .card-source {
+
+  width: 100%;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+}
+
 
 
 select {
@@ -104,7 +155,7 @@ select:focus {
 .article {
   max-width: 350px;
 }
-.article small {
+.card small {
   display: block;
 }
 
@@ -114,6 +165,8 @@ select:focus {
   background-color: white;
   margin: 50px 20px;
 }
+
+
 .avatar {
   width: 40px;
   border-radius: 50%;
@@ -351,7 +404,8 @@ select:focus {
 
 
 .image  {
-background: url('https://res.cloudinary.com/litall/image/upload/v1584544494/DovAlfon03a_by_Assaf_Matarasso_mojio8.jpg') no-repeat fixed;
+background: url('https://res.cloudinary.com/litall/image/upload/v1584544494/dovalfon/DovAlfon03a_by_Assaf_Matarasso_mojio8.jpg') no-repeat fixed;
+
 background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;

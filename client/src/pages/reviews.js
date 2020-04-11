@@ -12,27 +12,24 @@ import {
 
 const Reviews = () => {
  return (
-    <div className="container content">
+    <div className="content">
       <ReviewsDataProvider>
         <ReviewsDataConsumer>
 
           {({ reviewsData, reviewsByLanguage, updateFilter }) => (
-
-            <div className="atricle-list d-flex flex-wrap justify-content-around">
-                 <Filter updateFilter={updateFilter}
-                         languages={reviewsData
-            .map(review => review.language.split(' ')[0])
-            .filter((item, i, arr) => arr.indexOf(item) === i)}
-                 />
+            <div>
+              <Filter updateFilter={updateFilter}
+                      languages={reviewsData
+                        .map(review => review.language.split(' ')[0])
+                        .filter((item, i, arr) => arr.indexOf(item) === i)}
+              />
+              <div className="reviews-container">
                 {reviewsByLanguage.map(review => (
-        <Article article={review} key={review.id}/>
-    ))}
-
-
-
+                  <Article article={review} key={review.id}/>
+                ))}
+              </div>
             </div>
           )}
-
         </ReviewsDataConsumer>
       </ReviewsDataProvider>
     </div>
