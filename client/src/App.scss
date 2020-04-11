@@ -38,11 +38,43 @@ $font-size-base: 1rem;
   margin: 0;
 }
 
-.article-show {
-  width: 80%;
+.article-show-container {
   margin: 0 auto;
+
+  padding: 26px 72px;
+  background: rgb(250, 250, 247);
+        font-size: 1.2rem;
+
+
+
+}
+.content-layout {
+      max-width: 800px;
+        margin: 0 auto;
+
+
+
+}
+.article-show-header {
+
+}
+.article-show-container h1 {
+  margin: 1rem 0;
+  text-align: left;
 }
 
+.content-layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+
+
+.content-layout .text {
+  margin-top: 1rem;
+}
 .review-card  {
   display: block;
   padding: 25px;

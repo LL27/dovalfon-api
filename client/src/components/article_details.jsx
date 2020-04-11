@@ -13,21 +13,30 @@ const ArticleDetails = ({ article }) => {
 
   return (
 
-  <div id={id} key={id} className="article-show-container content container p-3">
-    <header className="article-show-header">
+  <div id={id} key={id} className="content">
+
+    <div className="article-show-container">
+
+    <div className="content-layout">
+        <header className="article-show-header">
       <span>{pub_date}</span>||<span>{source}</span>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
     </header>
+        <RenderImages photos={photos} />
+        <RenderVideo video_url={video_url}/>
+        <div className="text">
+          {content.split("\n").map((par) => <p>{par}</p>)}
+        </div>
 
-    <div className="content-show">
 
-      <RenderImages photos={photos} />
-      <RenderVideo video_url={video_url}/>
-      <div className="text">
-        {content.split("\n").map((par) => <p>{par}</p>)}
 
-      </div>
     </div>
+
+    </div>
+
+
+
+
 
 
          {/*<Link to={`/${article.tag.toLowerCase()}s/${article.id}`}></Link>*/}
