@@ -7,29 +7,6 @@ class ArticlesController < ApiController
    render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
   end
 
-  def interviews
-    @articles = Article.where(tag: "Interview").with_attached_photos
-
-   render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
-
-
-  end
-
-  def projects
-    @articles = Article.where(tag: "Project").with_attached_photos
-
-   render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
-
-
-  end
-
-  def reviews
-    @articles = Article.where(tag: "Review").with_attached_photos
-
-   render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
-
-
-  end
   # GET /articles/1
   def show
     if @article.photos.attached?

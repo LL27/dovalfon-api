@@ -8,7 +8,10 @@ class News extends React.Component {
 
   render() {
     return (
-     <ArticleList articleTag={this.props.articleTag} />
+    <div className="container content">
+       <ArticleList articleTag={this.props.articleTag} />
+    </div>
+
     )
   }
 

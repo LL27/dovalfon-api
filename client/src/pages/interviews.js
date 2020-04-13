@@ -9,8 +9,7 @@ class Interviews extends React.Component {
   render() {
     return (
      <div className="container content">
-           <ArticleList articleTag={this.props.articleTag} />
-
+      <ArticleList articleTag={this.props.articleTag} />
      </div>
     )
   }

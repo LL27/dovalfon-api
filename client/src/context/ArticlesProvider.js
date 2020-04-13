@@ -2,18 +2,14 @@ import React from 'react';
 
 const DefaultState = {
   articles: [],
-  filter: {},
-  articleTag: {}
+  filter: {}
 }
 
-
 const ArticlesContext = React.createContext(DefaultState)
-
 export const ArticlesConsumer = ArticlesContext.Consumer
 
 export class ArticlesProvider extends React.Component {
   state = DefaultState;
-
 
   fetch (endpoint) {
     return window.fetch(endpoint)
@@ -31,7 +27,8 @@ export class ArticlesProvider extends React.Component {
           this.setState({articles: []})
         }
       })
-  }
+    }
+
   updateFilter = filter => {
   this.setState({
     filter
@@ -50,25 +47,16 @@ export class ArticlesProvider extends React.Component {
   }
 
 
-  articlesByTag = (articleTag) => {
-    const { articles } = this.state
-    const formatArticleTag = (at) => {
-      return at.charAt(0).toUpperCase() + at.slice(1).slice(0, -1)
-    }
-
-    return articles.filter(item => item.tag.startsWith(formatArticleTag(articleTag)))
-  }
-
-    getArticleByArticleId = (articleId) => {
-    const { articles } = this.state
-    return articles.find(article => article.id === Number(articleId))
+  getArticleByArticleId = (articleId) => {
+   const { articles } = this.state
+   return articles.find(article => article.id === Number(articleId))
   }
 
   render() {
     const { children } = this.props
-    const { articles, filter, route_filter, articleTag } = this.state
+    const { articles, filter } = this.state
 
-    const filteredArticles = ArticlesProvider.applyFilter(articles, filter, articleTag)
+    const filteredArticles = ArticlesProvider.applyFilter(articles, filter)
 
 
     return (
@@ -76,9 +64,7 @@ export class ArticlesProvider extends React.Component {
         value={{
           articles: articles,
           articlesByLanguage: filteredArticles,
-
           getArticleByArticleId: this.getArticleByArticleId,
-          articlesByTag: this.articlesByTag,
           updateFilter: this.updateFilter,
         }}
       >

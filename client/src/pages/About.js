@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-class About extends Component {
-  render() {
+const About = () => {
+
       return <div className="content">
         <div className="wrapper">
     <div className="image">
@@ -34,7 +34,7 @@ class About extends Component {
       </div>
     </div>
       </div>
-  }
+
 }
 
 export default About;
