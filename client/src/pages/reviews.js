@@ -1,45 +1,25 @@
 import React from 'react';
-import Article from '../components/article';
-import Filter from '../components/filter';
+import ArticleList from '../components/article_list';
 
-import { Router } from "@reach/router";
+class Reviews extends React.Component {
+     constructor(props) {
+    super(props);
+  }
 
-import {
-  ReviewsDataProvider,
-  ReviewsDataConsumer
-} from '../context/ReviewsDataProvider'
+  render() {
+    return (
+     <div className="container content">
+      <ArticleList articleTag={this.props.articleTag} />
+     </div>
 
+    )
+  }
 
-const Reviews = () => {
- return (
-    <div className="content">
-      <ReviewsDataProvider>
-        <ReviewsDataConsumer>
+}
 
-          {({ reviewsData, reviewsByLanguage, updateFilter }) => (
-            <div>
-              <Filter updateFilter={updateFilter}
-                      languages={reviewsData
-                        .map(review => review.language.split(' ')[0])
-                        .filter((item, i, arr) => arr.indexOf(item) === i)}
-              />
-              <div className="reviews-container">
-                {reviewsByLanguage.map(review => (
-                  <Article article={review} key={review.id}/>
-                ))}
-              </div>
-            </div>
-          )}
-        </ReviewsDataConsumer>
-      </ReviewsDataProvider>
-    </div>
-)
-};
+export default Reviews
 
 
-
-
-export default Reviews;
 
 
 

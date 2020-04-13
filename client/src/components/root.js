@@ -31,15 +31,14 @@ const Root = () => (
   <Router>
     <App path="/">
       <Home path="/" />
-
        <About path="about" />
-       <Projects path="projects" />
+       <Projects path="/:articleTag" />
           <SingleProject path="/projects/:articleId" />
-        <Reviews path="reviews"/>
+        <Reviews path="/:articleTag"/>
           <SingleReview path="/reviews/:articleId" />
-        <Interviews path="interviews"/>
+        <Interviews path="/:articleTag"/>
           <SingleInterview path="/interviews/:articleId" />
-        <News path="news" />
+        <News path="/:articleTag" />
         <Contact path="contact" />
 
 

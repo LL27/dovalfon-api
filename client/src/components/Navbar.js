@@ -3,7 +3,12 @@ import { Link } from "@reach/router";
 
 
 class Navbar extends Component {
+   state = {
+    tag: ""
+  };
   render() {
+         const { tag } = this.state;
+
       return <div className="site-nav">
         <div className="logo">
           <Link to="/" className="d-flex justify-content-center">
@@ -21,7 +26,7 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
 
             <li className="nav-item active">
-              <Link to="/about" className="nav-link">About</Link>
+              <Link to="/about" className="nav-link" >About</Link>
             </li>
             <li className="nav-item">
              <Link to="/projects" className="nav-link">Projects</Link>

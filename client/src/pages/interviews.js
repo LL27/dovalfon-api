@@ -1,48 +1,25 @@
 import React from 'react';
-import Article from '../components/article';
-import Filter from '../components/filter';
+import ArticleList from '../components/article_list';
 
-import { Router } from "@reach/router";
+class Interviews extends React.Component {
+     constructor(props) {
+    super(props);
+  }
 
-import {
-  InterviewsDataProvider,
-  InterviewsDataConsumer
-} from '../context/InterviewsDataProvider'
+  render() {
+    return (
+     <div className="container content">
+           <ArticleList articleTag={this.props.articleTag} />
 
+     </div>
+    )
+  }
 
-const Interviews = () => {
- return (
-    <div className="container content">
-      <InterviewsDataProvider>
-        <InterviewsDataConsumer>
+}
 
-          {({ interviewsData, interviewsByLanguage, updateFilter }) => (
-
-            <div className="atricle-list d-flex flex-wrap justify-content-around">
-                 <Filter updateFilter={updateFilter}
-                         languages={interviewsData
-            .map(interview => interview.language.split(' ')[0])
-            .filter((item, i, arr) => arr.indexOf(item) === i)}
-                 />
-                {interviewsByLanguage.map(interview => (
-        <Article article={interview} key={interview.id}/>
-    ))}
+export default Interviews
 
 
-
-            </div>
-          )}
-
-        </InterviewsDataConsumer>
-      </InterviewsDataProvider>
-    </div>
-)
-};
-
-
-
-
-export default Interviews;
 
 
 

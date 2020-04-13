@@ -5,7 +5,7 @@ ActiveAdmin.register Article do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :content, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, photos: []
+  permit_params :title, :subtitle, :content, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, photos: []
 
 
   #
@@ -17,9 +17,27 @@ ActiveAdmin.register Article do
   #   permitted
   # end
 
+index do
+  id_column
+  column :title
+  column :subtitle
+  column :tag
+  column :language
+  column :media
+  column :source
+
+  actions
+end
+
+filter :title
+filter :subtitle
+filter :tag
+filter :language
+filter :media
 show do
     attributes_table do
       row :title
+      row :subtitle
       row :content
       row :credit
       row :tag
@@ -44,6 +62,7 @@ show do
     f.semantic_errors # shows errors on :base
     f.inputs do
       f.input :title
+      f.input :subtitle
       f.input :content
       f.input :credit
       f.input :tag

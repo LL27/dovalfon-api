@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class About extends Component {
   render() {
-      return <div>
-        <div className="wrapper content">
+      return <div className="content">
+        <div className="wrapper">
     <div className="image">
       <div className="about-text">
           <p>Dov Alfon, brought up in Paris and Tel Aviv, is a former

@@ -1,14 +1,15 @@
 // "details" page
 import * as React from 'react'
-import Interviews from '../pages/interviews';
+
 import {
   ArticlesProvider,
   ArticlesConsumer
 } from '../context/ArticlesProvider'
 
+
 import ArticleDetails from '../components/article_details'
 
-const SingleProject = ({ articleId }) => {
+const SingleArticle = ({ articleId }) => {
   return (
 
       <div className="container content">
@@ -23,4 +24,4 @@ const SingleProject = ({ articleId }) => {
   )
 }
 
-export default SingleProject
+export default SingleArticle

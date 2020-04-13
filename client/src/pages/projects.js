@@ -1,48 +1,25 @@
 import React from 'react';
-import Article from '../components/article';
-import Filter from '../components/filter';
+import ArticleList from '../components/article_list';
 
-import { Router } from "@reach/router";
+class Projects extends React.Component {
+     constructor(props) {
+    super(props);
+  }
 
-import {
-  ProjectsDataProvider,
-  ProjectsDataConsumer
-} from '../context/ProjectsDataProvider'
+  render() {
+    return (
+     <div className="container content">
+      <ArticleList articleTag={this.props.articleTag} />
+     </div>
 
+    )
+  }
 
-const Projects = () => {
- return (
-    <div className="container content">
-      <ProjectsDataProvider>
-        <ProjectsDataConsumer>
+}
 
-          {({ projectsData, projectsByLanguage, updateFilter }) => (
-
-            <div className="atricle-list d-flex flex-wrap justify-content-around">
-              <Filter updateFilter={updateFilter}
-                         languages={projectsData
-            .map(project => project.language.split(' ')[0])
-            .filter((item, i, arr) => arr.indexOf(item) === i)}
-                 />
-                {projectsByLanguage.map(project => (
-        <Article article={project} key={project.id}/>
-    ))}
+export default Projects
 
 
-
-            </div>
-          )}
-
-        </ProjectsDataConsumer>
-      </ProjectsDataProvider>
-    </div>
-)
-};
-
-
-
-
-export default Projects;
 
 
 

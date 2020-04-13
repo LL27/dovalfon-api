@@ -1,9 +1,25 @@
-import React from 'react'
+import React from 'react';
+import ArticleList from '../components/article_list';
 
-const News = () => (
-  <div className="content">
-    <h2>News</h2>
-  </div>
-);
+class News extends React.Component {
+     constructor(props) {
+    super(props);
+  }
 
-export default News;
+  render() {
+    return (
+     <ArticleList articleTag={this.props.articleTag} />
+    )
+  }
+
+}
+
+export default News
+
+
+
+
+
+
+
+

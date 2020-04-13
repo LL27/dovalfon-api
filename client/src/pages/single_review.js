@@ -1,11 +1,10 @@
 // "details" page
 import * as React from 'react'
-
+import Interviews from '../pages/interviews';
 import {
-  ReviewsDataProvider,
-  ReviewsDataConsumer
-} from '../context/ReviewsDataProvider'
-
+  ArticlesProvider,
+  ArticlesConsumer
+} from '../context/ArticlesProvider'
 
 import ArticleDetails from '../components/article_details'
 
@@ -13,13 +12,13 @@ const SingleReview = ({ articleId }) => {
   return (
 
       <div className="container content">
-        <ReviewsDataProvider>
-          <ReviewsDataConsumer>
-            {({ getReviewByArticleId }) => (
-              <ArticleDetails article={getReviewByArticleId(articleId)} />
+        <ArticlesProvider>
+          <ArticlesConsumer>
+            {({ getArticleByArticleId }) => (
+              <ArticleDetails article={getArticleByArticleId(articleId)} />
             )}
-          </ReviewsDataConsumer>
-        </ReviewsDataProvider>
+          </ArticlesConsumer>
+        </ArticlesProvider>
       </div>
   )
 }

@@ -16,7 +16,7 @@ class Filter extends React.Component {
                   <select className="form-select"
                           id="language" value={this.state.language}
                           onChange={event => this.setState({ language: event.target.value })}>
-                    <option value="">Language</option>
+                    <option value="">All languages</option>
                     {this.props.languages.map(lang => (
                       <option key={lang} value={lang.toLowerCase()}>
                         {lang}
