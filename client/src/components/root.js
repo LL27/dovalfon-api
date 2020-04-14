@@ -9,7 +9,6 @@ import '../index.css'
 
 import About from "../pages/About";
 import Home from "../pages/Home";
-import News from "../pages/News";
 import Contact from "../pages/Contact";
 
 

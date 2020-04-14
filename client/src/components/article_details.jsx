@@ -9,7 +9,9 @@ const ArticleDetails = ({ article }) => {
 
   const { id, title, content, video_url, source, photos, tag, pub_date } = article
 
-
+  const makeParagraphs = (text) => {
+    return text.split("\n").map((par) => <p>{par}</p>)
+  }
 
   return (
 
@@ -25,7 +27,7 @@ const ArticleDetails = ({ article }) => {
         <RenderImages photos={photos} />
         <RenderVideo video_url={video_url}/>
         <div className="text">
-          {content.split("\n").map((par) => <p>{par}</p>)}
+          {makeParagraphs(content)}
         </div>
 
 
