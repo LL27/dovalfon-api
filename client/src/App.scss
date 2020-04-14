@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab&display=swap');
 
+
 $body-font: "Roboto Mono", "monospace";
 $headers-font: "Roboto Slab", "serif";
 $logo-font: "IBM Plex Serif", "serif";
@@ -202,26 +203,7 @@ select:focus {
 }
 
 
-.avatar {
-  width: 40px;
-  border-radius: 50%;
-}
-.avatar-large {
-  width: 56px;
-  border-radius: 50%;
-}
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-}
-.avatar-square {
-  width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-}
+
 .btn-order {
   border: 1px solid black;
   display: block;
@@ -438,7 +420,7 @@ select:focus {
   }
 
 
-.image  {
+.about-image  {
 background: url('https://res.cloudinary.com/litall/image/upload/v1584544494/dovalfon/DovAlfon03a_by_Assaf_Matarasso_mojio8.jpg') no-repeat fixed;
 
 background-position: center center;
@@ -473,7 +455,7 @@ background-position: center center;
 }
 
 
-.image, .about-text {
+.about-image, .about-text {
   height: auto;
 }
 
@@ -578,18 +560,39 @@ background-position: center center;
 }
 
 
+.flip-container {
+  cursor: pointer;
+  height: 200px;
+  perspective: 600;
+  position: relative;
+  width: 130px;
+}
+.flip {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
 
-
-
-
-
-
-
-
-
-
-
-
+}
+.flip:hover {
+  transform: rotateY(180deg);
+}
+.flip .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.flip .back {
+  padding-top: 40%;
+  color: #373331;
+  background: rgb(250, 250, 247);
+  text-align: center;
+  transform: rotateY(180deg);
+}
 
 
 

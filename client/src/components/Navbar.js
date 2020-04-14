@@ -3,11 +3,9 @@ import { Link } from "@reach/router";
 
 
 class Navbar extends Component {
-   state = {
-    tag: ""
-  };
+
   render() {
-         const { tag } = this.state;
+
 
       return <div className="site-nav">
         <div className="logo">
@@ -25,7 +23,7 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
 
-            <li className="nav-item active">
+            <li className="nav-item">
               <Link to="/about" className="nav-link" >About</Link>
             </li>
             <li className="nav-item">
@@ -51,3 +49,9 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+
+
+
+
+

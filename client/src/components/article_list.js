@@ -1,5 +1,7 @@
 import React from 'react';
-import Article from './article';
+
+
+import ListedArticle from '../components/listed_article';
 import Filter from '../components/filter';
 
 
@@ -8,27 +10,22 @@ import {
   ArticlesConsumer
 } from '../context/ArticlesProvider'
 
-
 const ArticleList = (props) => {
-  const formatArticleTag = (at) => {
-    return at.charAt(0).toUpperCase() + at.slice(1).slice(0, -1)
-  }
-  return (
+
+  return ( <div className="content">
       <ArticlesProvider>
         <ArticlesConsumer>
-
         {({ articles, articlesByLanguage, updateFilter }) => (
-
-            <div className="atricle-list d-flex flex-wrap justify-content-around">
+            <div className="d-flex flex-wrap justify-content-around">
               <Filter updateFilter={updateFilter}
                          languages={articles
             .map(article => article.language.split(' ')[0])
             .filter((item, i, arr) => arr.indexOf(item) === i)}
                  />
-                {articlesByLanguage
-                  .filter(item => item.tag.startsWith(formatArticleTag(props.articleTag)))
+                        {articlesByLanguage
+                   .filter(item => item.tag.startsWith(props.articleTag))
                   .map(article => (
-                    <Article article={article} key={article.id}/>
+                    <ListedArticle article={article} key={article.id}/>
                   ))}
 
             </div>
@@ -36,9 +33,10 @@ const ArticleList = (props) => {
 
         </ArticlesConsumer>
       </ArticlesProvider>
-
-
-  );
+  </div>
+    )
 };
+
 export default ArticleList;
+
 

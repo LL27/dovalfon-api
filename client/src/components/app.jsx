@@ -20,18 +20,14 @@ class App extends React.Component {
 
   render() {
     return (
-       <React.Fragment>
-         <Navbar />
+      <div>
+       <Navbar/>
            {this.props.children}
         <ScrollToTop showUnder={160}>
          <FontAwesomeIcon icon={faArrowUp} />
         </ScrollToTop>
-
          <Footer />
-
-       </React.Fragment>
-
-
+      </div>
 
     );
   }

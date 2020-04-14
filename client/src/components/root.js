@@ -6,26 +6,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../index.css'
 
-
-import About from "../pages/About";
+import App from "./app";
 import Home from "../pages/Home";
+import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Interviews from '../pages/interviews'
+import Reviews from '../pages/reviews'
+import Projects from '../pages/projects'
+import News from '../pages/news'
 
 
 import Articles from '../components/articles'
+
 import SingleArticle from '../components/single_article'
 
 
-import App from "./app";
+
 
 
 const Root = () => (
   <Router>
     <App path="/">
       <Home path="/" />
-      <About path="about" />
-      <Articles path="/:articleTag" />
-        <SingleArticle path="/:articleTag/:articleId" />
+      <About path="/about" />
+      <Projects path="/projects" />
+        <SingleArticle path="projects/:articleId" />
+      <Interviews path="/interviews" />
+        <SingleArticle path="interviews/:articleId" />
+      <Reviews path="/reviews" />
+        <SingleArticle path="reviews/:articleId" />
+      <News path="/news" />
+        <SingleArticle path="news/:articleId" />
       <Contact path="contact" />
     </App>
   </Router>

@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 class Home extends Component {
-    constructor(props){
+  constructor(props){
     super(props);
   }
   componentDidMount(){
@@ -15,12 +15,12 @@ class Home extends Component {
   }
 
   render() {
-      return <div>
-
+   return <div className="content">
     <div className="hero">
       <div className="hero-left">
-      <div className="book-image" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584544373/book-cover-america_jx64c9.jpg')`}}></div>
-    </div>
+        <div className="book-image" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584544373/book-cover-america_jx64c9.jpg')`}}></div>
+      </div>
+
       <div className="hero-right">
         <div className="text">
           <h3>The <em>London Times</em> #1 Best Seller</h3>
@@ -37,44 +37,82 @@ class Home extends Component {
       </div>
     </div>
 
-      <div className="container translations">
-    <div className="book" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/french_vn7rth.jpg')`, backgroundSize: "cover" }}>
+    <div className="container translations">
+      <div className="flip-container book">
+        <div className="flip">
+          <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/french_vn7rth.jpg')`, backgroundSize: "cover" }}></div>
+          <div className="side back">Read the first chapter</div>
+        </div>
+      </div>
+
+      <div className="flip-container book">
+        <div className="flip">
+          <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/english_gbeeiw.jpg')`, backgroundSize: "cover" }}></div>
+          <div className="side back">Read the first chapter</div>
+        </div>
+      </div>
+
+      <div className="flip-container book">
+        <div className="flip">
+          <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546538/dovalfon/italian_dgs6cv.jpg')`, backgroundSize: "cover"}}></div>
+          <div className="side back">Read the first chapter</div>
+        </div>
+      </div>
+
+      <div className="flip-container book">
+        <div className="flip">
+          <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/israel_f6stuh.jpg')`, backgroundSize: "cover"}}></div>
+          <div className="side back">Read the first chapter</div>
+        </div>
+      </div>
+
+      <div className="flip-container book">
+        <div className="flip">
+          <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/dutch_ylscnz.jpg')`, backgroundSize: "cover"}}></div>
+          <div className="side back">Read the first chapter</div>
+        </div>
+      </div>
+
+      <div className="flip-container book">
+        <div className="flip">
+          <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/german_btg1vv.jpg')`, backgroundSize: "cover"}}></div>
+          <div className="side back">Read the first chapter</div>
+        </div>
+      </div>
+
+      <div className="flip-container book">
+        <div className="flip">
+          <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546539/dovalfon/spanish_nauri5.png')`, backgroundSize: "cover"}}></div>
+          <div className="side back">Read the first chapter</div>
+        </div>
+      </div>
 
     </div>
-    <div className="book" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/english_gbeeiw.jpg')`, backgroundSize: "cover" }}>
-    </div>
-    <div className="book" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546538/dovalfon/italian_dgs6cv.jpg')`, backgroundSize: "cover"}}>
-    </div>
-    <div className="book" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/israel_f6stuh.jpg')`, backgroundSize: "cover"}}>
-    </div>
-    <div className="book" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/dutch_ylscnz.jpg')`, backgroundSize: "cover"}}>
-    </div>
-    <div className="book" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/german_btg1vv.jpg')`, backgroundSize: "cover"}}>
-    </div>
-    <div className="book" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546539/dovalfon/spanish_nauri5.png')`, backgroundSize: "cover"}}>
-    </div>
-  </div>
+
+
+
+
 
 
   <div className="praises">
 
-
     <div className="praise" data-aos="fade-up">
-
       <p>
       “A deeply enjoyable espionage thriller with plenty of juicy details about modern spycraft.”
       </p>
-       <small className="credit">The Daily Telegraph </small>
+      <small className="credit">The Daily Telegraph </small>
     </div>
+
     <div className="praise" data-aos="fade-up">
       <p>"Dov Alfon, a former intelligence officer and the editor-in-chief of an Israeli newspaper, knows about secrets and how to tell stories. He doesn’t let his breathlessly exciting debut to get out of hand."</p>
       <small className="credit">The London Times</small>
     </div>
+
     <div className="praise" data-aos="fade-up">
       <p>"A genuinely thrilling espionage novel... a brilliantly choreographed dance macabre."</p>
       <small className="credit">The Mail on Sunday</small>
-
     </div>
+
     <div className="praise" data-aos="fade-up">
       <p>"a timely addition to the canon."</p>
        <small className="credit">Financial Times</small>
@@ -88,14 +126,17 @@ class Home extends Component {
       <p>"There are some terrific action sequences in this fiendishly complicated yet pacey thriller."</p>
       <small className="credit">The Guardian</small>
     </div>
+
     <div className="praise" data-aos="fade-up">
       <p>"A Long Night in Paris is one of the most enjoyable action spy thrillers I’ve read in a long time."</p>
       <small className="credit">New Books Magazine</small>
     </div>
+
     <div className="praise" data-aos="fade-up">
       <p>"Compulsively readable. The insights into the technology available to spies today is enlightening."</p>
       <small className="credit">Crime Time</small>
     </div>
+
   </div>
 
 

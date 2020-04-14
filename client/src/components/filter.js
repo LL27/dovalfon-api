@@ -2,30 +2,28 @@ import * as React from 'react'
 
 
 class Filter extends React.Component {
- state = {
+  state = {
     language: ""
   };
 
   render() {
    const { language } = this.state;
 
-    return (
-      <div className="container mb-3">
-
-        <form className="form-horizontal" noValidate onChange={() => setTimeout(() => this.props.updateFilter(this.state), 0)}>
-                  <select className="form-select"
-                          id="language" value={this.state.language}
-                          onChange={event => this.setState({ language: event.target.value })}>
-                    <option value="">All languages</option>
-                    {this.props.languages.map(lang => (
-                      <option key={lang} value={lang.toLowerCase()}>
-                        {lang}
-                      </option>
-                    ))}
-                    </select>
-
-        </form>
-      </div>
+  return (
+    <div className="container mb-3">
+      <form className="form-horizontal" noValidate
+            onChange={() => setTimeout(() => this.props.updateFilter(this.state), 0)}>
+        <select className="form-select"
+                id="language" value={this.state.language}
+                onChange={event => this.setState({ language: event.target.value })}>
+          <option value="">All languages</option>
+          {this.props.languages.map(lang => (
+          <option key={lang} value={lang.toLowerCase()}>
+            {lang}
+          </option>))}
+        </select>
+      </form>
+     </div>
     )
   }
 }
