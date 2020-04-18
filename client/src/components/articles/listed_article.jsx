@@ -9,7 +9,7 @@ const ListedArticle = ({article}) => {
   if (!article) {
     return null
   }
-  const { id, title, video_url, source, tag, photos, media, quote } = article
+  const { id, title, video_url, source, tag, photos } = article
 
 
   const cardClass = classNames({
@@ -19,7 +19,7 @@ const ListedArticle = ({article}) => {
 
   return (
     <div id={id} key={id} className={cardClass}>
-      <RenderThumbnailMedia video_url={video_url} photos={photos} title={title} media={media} quote={quote}/>
+      <RenderThumbnailMedia video_url={video_url} photos={photos} />
       <div className="card-infos">
         <Link to={`/${article.tag.toLowerCase()}s/${id}`}>
           <h4>{title}</h4>

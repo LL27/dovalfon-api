@@ -5,7 +5,7 @@ ActiveAdmin.register Article do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :subtitle, :content, :excerpt, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, photos: []
+  permit_params :title, :subtitle, :content, :excerpt, :quote, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, photos: []
 
 
   #

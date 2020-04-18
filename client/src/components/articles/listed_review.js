@@ -1,4 +1,6 @@
 import React from 'react';
+import makeParagraphs from '../../helpers/make_paragraphs'
+
 
 const ListedReview = ({article}) => {
   if (!article) {
@@ -17,9 +19,8 @@ const ListedReview = ({article}) => {
   return (
     <div id={id} key={id} className="review-card container">
       <div className="card-infos">
-          <h4><em>{quote}</em></h4>
-          <div className="text">{excerpt}</div>
-          {creditLine()}
+        <div className="text">{makeParagraphs(excerpt, "small-text")}</div>
+        {creditLine()}
       </div>
     </div>
   );

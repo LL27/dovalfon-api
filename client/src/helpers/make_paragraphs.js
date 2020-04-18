@@ -1,6 +1,11 @@
 import React from 'react';
 
-const makeParagraphs = (text) => {
-    return text.split("\n").map((par) => <p>{par}</p>)
+const makeParagraphs = (text, textClass="text") => {
+  if (!text) {
+    return null;
+  } else {
+    return text.split("\n").map((par) => <p className={textClass}>{par}</p>)
+  }
+
 }
 export default makeParagraphs;
