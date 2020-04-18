@@ -24,11 +24,11 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
 
             <li className="nav-item">
-              <Link to="/about" className="nav-link" >About</Link>
+              <Link to="/about" className="nav-link">Biography</Link>
             </li>
-            <li className="nav-item">
+            {/*<li className="nav-item">
              <Link to="/projects" className="nav-link">Projects</Link>
-             </li>
+             </li>*/}
             <li className="nav-item">
               <Link to="/reviews" className="nav-link">Reviews</Link>
             </li>
@@ -42,9 +42,9 @@ class Navbar extends Component {
               <Link to="/contact" className="nav-link">Contact</Link>
             </li>
           </ul>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
   }
 }
 

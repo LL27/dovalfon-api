@@ -15,10 +15,10 @@ class Home extends Component {
   }
 
   render() {
-   return <div className="content">
+   return <div className="content home">
     <div className="hero">
       <div className="hero-left">
-        <div className="book-image" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584544373/book-cover-america_jx64c9.jpg')`}}></div>
+        <div className="book-image" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584544373/dovalfon/book-cover-america_jx64c9.jpg')`}}></div>
       </div>
 
       <div className="hero-right">

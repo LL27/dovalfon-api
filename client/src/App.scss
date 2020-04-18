@@ -14,27 +14,29 @@ $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $font-size-base: 1rem;
 
-.card {
+.box-card {
   overflow: hidden;
   border: none;
   border-radius: 3px;
+  max-width: 350px;
+
   margin: 10px 0px;
   //background: white;
   //box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card > img {
+.box-card > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card h4 > a {
+.box-card h4 > a {
   margin: 0;
   color: black;
 }
 
-.card p {
+.box-card p {
   opacity: .7;
   margin: 0;
 }
@@ -57,14 +59,28 @@ $font-size-base: 1rem;
 
 
 }
-.article-show-header {
-
-}
-.article-show-container h1 {
-  margin: 1rem 0;
+.article-show-header  {
+  margin: .7rem 0;
   text-align: left;
   color: #373331;
+  font-weight: 600;
+  h1 {
+     font-size: 3rem;
+     margin: 2rem 0;
+  }
+  .subtitle {
+     font-size: 1.5rem;
+  }
+  .source {
+
+    padding: 5PX 10px;
+    background: red;
+    color: white;
+
+  }
 }
+
+
 
 .content-layout {
   display: flex;
@@ -78,26 +94,27 @@ $font-size-base: 1rem;
 .content-layout .text {
   margin-top: 1rem;
 }
-.review-card  {
+.wide-card  {
   display: block;
   padding: 25px;
   width: 100%;
 }
-.review-card .card-infos {
+.wide-card .card-infos {
   padding: 4px;
   max-width: 800px;
   margin: 0 auto;
 
 }
-.review-card .card-infos .card-source {
-
+.review-credit {
+  text-align: right;
   width: 100%;
 }
 
-.reviews-container {
+.wide-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
 }
 
 
@@ -110,6 +127,7 @@ select:focus {
 }
 
 .navbar-lewagon {
+
   justify-content: center;
   background: white;
 }
@@ -129,12 +147,12 @@ select:focus {
 .navbar {
     //position: fixed;
     width: 100%;
-    top: -10px;
+    top: -16px;
     padding-top: 0;
-    padding-bottom: 12px;
+    padding-bottom: 0;
 }
 .logo {
-  padding-top: 12px;
+  padding-top: 0px;
   background: white;
 
 }
@@ -142,6 +160,7 @@ select:focus {
   font-size: 72px;
   font-family: $logo-font;
   color: #292b29;
+  line-height: 1.5;
   opacity: 1;
   &:hover {
     color: #292b29;
@@ -188,10 +207,8 @@ select:focus {
   flex-wrap: wrap !important;
   justify-content: space-evenly;
 }
-.article {
-  max-width: 350px;
-}
-.card small {
+
+.box-card small {
   display: block;
 }
 
@@ -460,13 +477,15 @@ background-position: center center;
 }
 
 
-
+.home {
+  background-color: rgb(254, 255, 251);
+}
 
 .hero {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px 26px;
+  padding: 36px 26px;
   h2 {
   }
 }

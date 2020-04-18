@@ -15,14 +15,7 @@ import Reviews from '../pages/reviews'
 import Projects from '../pages/projects'
 import News from '../pages/news'
 
-
-import Articles from '../components/articles'
-
-import SingleArticle from '../components/single_article'
-
-
-
-
+import SingleArticle from '../components/articles/single_article'
 
 const Root = () => (
   <Router>
@@ -36,7 +29,7 @@ const Root = () => (
       <Reviews path="/reviews" />
         <SingleArticle path="reviews/:articleId" />
       <News path="/news" />
-        <SingleArticle path="news/:articleId" />
+        <SingleArticle path="newss/:articleId" />
       <Contact path="contact" />
     </App>
   </Router>

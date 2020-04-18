@@ -5,7 +5,7 @@ ActiveAdmin.register Article do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :subtitle, :content, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, photos: []
+  permit_params :title, :subtitle, :content, :excerpt, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, photos: []
 
 
   #
@@ -21,6 +21,7 @@ index do
   id_column
   column :title
   column :subtitle
+  column :excerpt
   column :tag
   column :language
   column :media
@@ -39,6 +40,7 @@ show do
       row :title
       row :subtitle
       row :content
+      row :excerpt
       row :credit
       row :tag
       row :url
@@ -64,6 +66,7 @@ show do
       f.input :title
       f.input :subtitle
       f.input :content
+      f.input :excerpt
       f.input :credit
       f.input :tag
       f.input :url

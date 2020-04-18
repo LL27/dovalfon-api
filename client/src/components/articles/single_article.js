@@ -1,11 +1,11 @@
 // "details" page
 import * as React from 'react'
-import SingleArticleDetails from '../components/single_article_details'
+import SingleArticleDetails from './single_article_details'
 
 import {
   ArticlesProvider,
   ArticlesConsumer
-} from '../context/ArticlesProvider'
+} from '../../context/ArticlesProvider'
 
 const SingleArticle = ({ articleId }) => {
   return (
