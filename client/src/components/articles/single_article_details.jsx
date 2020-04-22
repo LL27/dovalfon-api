@@ -12,9 +12,6 @@ const SingleArticleDetails = ({ article }) => {
 
   const { id, title, content, video_url, source, photos, tag, subtitle, pub_date } = article
 
-
-
-
   return (
 
     <div id={id} key={id} className="container article-show-container">

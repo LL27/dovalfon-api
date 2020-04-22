@@ -5,7 +5,7 @@ ActiveAdmin.register Article do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :subtitle, :content, :excerpt, :quote, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, photos: []
+  permit_params :title, :subtitle, :content, :excerpt, :quote, :credit, :tag, :url, :video_url, :media, :language, :source, :pub_date, :importance, photos: []
 
 
   #
@@ -26,6 +26,7 @@ index do
   column :language
   column :media
   column :source
+  column :importance
 
   actions
 end
@@ -35,6 +36,7 @@ filter :subtitle
 filter :tag
 filter :language
 filter :media
+filter :importance
 show do
     attributes_table do
       row :title
@@ -49,6 +51,7 @@ show do
       row :media
       row :language
       row :quote
+      row :importance
       row :source
       if :photos.present?
         row :photos do |ad|
@@ -75,6 +78,7 @@ show do
       f.input :language
       f.input :source
       f.input :quote
+      f.input :importance
       f.input :pub_date
       f.input :photos, as: :file, input_html: { multiple: true }, direct_upload: true
       f.actions

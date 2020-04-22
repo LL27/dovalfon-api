@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
 
 class ScrollButton extends React.Component {
   constructor() {
@@ -24,7 +24,6 @@ class ScrollButton extends React.Component {
   render () {
     return <button title='Back to top' className='scroll'
              onClick={ () => { this.scrollToTop(); }}>
-              <FontAwesomeIcon icon={faArrowUp} />
             </button>;
   }
 }

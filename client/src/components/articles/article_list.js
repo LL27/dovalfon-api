@@ -13,6 +13,7 @@ import {
 } from '../../context/ArticlesProvider'
 
 const ArticleList = (props) => {
+
   function renderListedArticle(article) {
     if (article.tag === "Review") {
       return <ListedReview article={article} key={article.id}/>
@@ -20,10 +21,40 @@ const ArticleList = (props) => {
       return <ListedArticle article={article} key={article.id}/>
     }
   }
+  function renderFilter(articles, articlesByLanguage, updateFilter) {
+    if (props.articleTag === "Interview") {
+      return (
+         <div className="d-flex flex-wrap justify-content-center">
+          {articles
+            .filter(item => item.tag.startsWith(props.articleTag))
+            .map(article => (
+              renderListedArticle(article)
+          ))}
+        </div>)
+    } else {
+      return (
+        <React.Fragment>
+          <Filter updateFilter={updateFilter}
+                 languages={articles
+                 .map(article => article.language.split(' ')[0])
+                 .filter((item, i, arr) => arr.indexOf(item) === i)}
+          />
+          <div className="d-flex flex-wrap justify-content-center">
+            {articlesByLanguage
+              .filter(item => item.tag.startsWith(props.articleTag))
+              .map(article => (
+                renderListedArticle(article)
+            ))}
+           </div>
+          </React.Fragment>
+        )
+      }
+    }
   const containerClass = classNames({
     'content': true,
-    'wide-container': props.articleTag === "Review" || props.articleTag === "News",
-    'container': props.articleTag === "Interview"  || props.articleTag === "Project"
+    'reviews-container': props.articleTag === "Review",
+     'wide-container': props.articleTag === "News",
+    'container-fluid': props.articleTag === "Interview"
 
   })
 
@@ -32,22 +63,7 @@ const ArticleList = (props) => {
         <ArticlesConsumer>
         {({ articles, articlesByLanguage, updateFilter }) => (
            <div className={containerClass}>
-              <Filter updateFilter={updateFilter}
-                         languages={articles
-                         .map(article => article.language.split(' ')[0])
-                         .filter((item, i, arr) => arr.indexOf(item) === i)}
-                />
-
-              <div className="d-flex flex-wrap justify-content-around">
-
-
-                {articlesByLanguage
-                  .filter(item => item.tag.startsWith(props.articleTag))
-                  .map(article => (
-                    renderListedArticle(article)
-                ))}
-
-               </div>
+                {renderFilter(articles, articlesByLanguage, updateFilter)}
             </div>
           )}
         </ArticlesConsumer>

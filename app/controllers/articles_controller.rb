@@ -3,7 +3,7 @@ class ArticlesController < ApiController
 
   # GET /articles
   def index
-    @articles = Article.all.with_attached_photos
+    @articles = Article.all.with_attached_photos.order(:importance)
    render json: @articles.map { |article| article.as_json.merge({ photos: article.photos.map{|photo| ({ url: url_for(photo), id: photo.id })} }) }
   end
 
@@ -49,6 +49,6 @@ class ArticlesController < ApiController
 
     # Only allow a trusted parameter "white list" through.
     def article_params
-      params.require(:article).permit(:title, :subtitle, :content, :credit, :tag, :url, :video_url, :media, :language, :quote, :source, :excerpt, :pub_date, photos: [])
+      params.require(:article).permit(:title, :subtitle, :content, :credit, :tag, :url, :video_url, :media, :language, :quote, :source, :excerpt, :pub_date, :importance, photos: [])
     end
 end

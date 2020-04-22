@@ -27,7 +27,6 @@ const Root = () => (
       <Interviews path="/interviews" />
         <SingleArticle path="interviews/:articleId" />
       <Reviews path="/reviews" />
-        <SingleArticle path="reviews/:articleId" />
       <News path="/news" />
         <SingleArticle path="newss/:articleId" />
       <Contact path="contact" />

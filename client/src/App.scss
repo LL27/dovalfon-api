@@ -18,9 +18,9 @@ $font-size-base: 1rem;
   overflow: hidden;
   border: none;
   border-radius: 3px;
-  max-width: 350px;
+  max-width: 380px;
 
-  margin: 10px 0px;
+  margin: 10px;
   //background: white;
   //box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -40,7 +40,21 @@ $font-size-base: 1rem;
   opacity: .7;
   margin: 0;
 }
+.banner {
+  position: relative;
+  height: 30vh;
+  background-size: contain;
+  background-repeat-y: no-repeat;
+  h2 {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-weight: bold;
 
+  }
+}
 .article-show-container {
   margin: 0 auto;
   color: #373331;
@@ -106,8 +120,29 @@ $font-size-base: 1rem;
 
 }
 .review-credit {
-  text-align: right;
-  width: 100%;
+  display: inline-block;
+  float: right;
+  background: black;
+  width: auto;
+  color: rgb(250, 250, 247);
+  padding: 0px 6px;
+}
+
+.review-card {
+  max-width: 800px;
+margin: 0 auto;
+padding: 10px 0px;
+height: auto;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+ background-color: rgb(254, 255, 251);
+ padding: 0 10%;
+
 }
 
 .wide-container {
@@ -121,6 +156,10 @@ $font-size-base: 1rem;
 
 select {
   padding: 2px;
+
+}
+.select-menu {
+  width: auto;
 }
 select:focus {
   outline:none;
@@ -157,10 +196,10 @@ select:focus {
 
 }
 .logo a {
-  font-size: 72px;
+  font-size: 42px;
   font-family: $logo-font;
   color: #292b29;
-  line-height: 1.5;
+  line-height: 1.6;
   opacity: 1;
   &:hover {
     color: #292b29;
@@ -174,10 +213,18 @@ select:focus {
   padding: 0.5rem 1rem;
 }
 
+.external-link {
+  color: inherit;
+}
+.external-link:hover {
+  text-decoration: underline;
+    color: inherit;
 
+
+}
 
 .footer {
-  background: #fefffb;
+  background-color: rgb(250, 250, 247);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -192,7 +239,7 @@ select:focus {
 }
 .footer-links a {
   color: black;
-  opacity: 0.15;
+  opacity: 0.7;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
@@ -201,7 +248,20 @@ select:focus {
   opacity: 1;
 }
 
+a.nav-link {
+  color: black;
+  opacity: 0.8;
+  text-decoration: none;
+  padding: 0;
+  margin: 0px 6px;
+  height: 40px;
+}
 
+a.nav-link:hover {
+  opacity: 1;
+  border-bottom: black solid 2px;
+  transition: all 70ms;
+}
 .article-list {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -228,6 +288,9 @@ select:focus {
   margin: 0 auto;
 }
 
+.scroll-icon {
+   border: 4px black solid;
+}
 
 .scroll {
   font-size: 28px;
@@ -236,7 +299,7 @@ select:focus {
   height: 50px;
   text-align: center;
   border-radius: 50%;
-  border: 4px black solid;
+
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -536,49 +599,6 @@ background-position: center center;
 }
 
 
-
-
-// Specific CSS for your home-page
-
-// Small devices (landscape phones, 576px and up)
-//@media (min-width: 576px)
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 992px){
-    .hero-right {
-    max-width: 400px;
-  }
-    .hero-left, .hero-left .book-image {
-    max-width: 400px;
-  }
-
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 1000px) {
-
-  .translations {
-
-    .book {
-
-      margin: 8px;
-  }
-}
-
-
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    .hero-right {
-    max-width: 700px;
-  }
-   .hero-left, .hero-left .book-image {
-    max-width: 400px;
-  }
-}
-
-
 .flip-container {
   cursor: pointer;
   height: 200px;
@@ -612,6 +632,66 @@ background-position: center center;
   text-align: center;
   transform: rotateY(180deg);
 }
+
+
+
+// Specific CSS for your home-page
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .banner {
+    height: 50vh;
+    h2 {
+      font-size: 48px,
+    }
+  }
+  .logo a {
+    font-size: 72px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 992px){
+
+  .banner {
+    height: 65vh;
+    h2 {
+      font-size: 56px,
+    }
+  }
+    .hero-right {
+    max-width: 400px;
+  }
+    .hero-left, .hero-left .book-image {
+    max-width: 400px;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 1000px) {
+
+  .translations {
+
+    .book {
+
+      margin: 8px;
+  }
+}
+
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .hero-right {
+    max-width: 700px;
+  }
+   .hero-left, .hero-left .book-image {
+    max-width: 400px;
+  }
+}
+
 
 
 

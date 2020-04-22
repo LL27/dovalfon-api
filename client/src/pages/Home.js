@@ -10,7 +10,7 @@ class Home extends Component {
   }
   componentDidMount(){
     AOS.init({
-      duration : 2000
+      duration : 1000
     })
   }
 
@@ -32,7 +32,7 @@ class Home extends Component {
             For Commissaire Léger of the Paris Police, all coincidences are suspect. When a second young Israeli from the flight is kidnapped, this time at gunpoint from his hotel room, his suspicions are confirmed - and a diplomatic crisis looms. As the race to identify the victims and the reasons behind their abductions intensifies, a covert Chinese commando team watches from the rooftops, while hour by hour the morgue receives fresh bodies from around Paris
           </p>
           <p>This could be one long night in the City of Lights.</p>
-          <Link to="https://www.amazon.com/gp/product/B07ZHN8F89/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0" className="btn btn-order ">Order</Link>
+          <Link to="https://www.amazon.com/gp/product/B07ZHN8F89/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0" className="btn btn-order ">Read an excerpt</Link>
         </div>
       </div>
     </div>
@@ -41,49 +41,49 @@ class Home extends Component {
       <div className="flip-container book">
         <div className="flip">
           <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/french_vn7rth.jpg')`, backgroundSize: "cover" }}></div>
-          <div className="side back">Read the first chapter</div>
+          <div className="side back">Read an excerpt</div>
         </div>
       </div>
 
       <div className="flip-container book">
         <div className="flip">
           <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/english_gbeeiw.jpg')`, backgroundSize: "cover" }}></div>
-          <div className="side back">Read the first chapter</div>
+          <div className="side back">Read an excerpt</div>
         </div>
       </div>
 
       <div className="flip-container book">
         <div className="flip">
           <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546538/dovalfon/italian_dgs6cv.jpg')`, backgroundSize: "cover"}}></div>
-          <div className="side back">Read the first chapter</div>
+          <div className="side back">Read an excerpt</div>
         </div>
       </div>
 
       <div className="flip-container book">
         <div className="flip">
           <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/israel_f6stuh.jpg')`, backgroundSize: "cover"}}></div>
-          <div className="side back">Read the first chapter</div>
+          <div className="side back">Read an excerpt</div>
         </div>
       </div>
 
       <div className="flip-container book">
         <div className="flip">
           <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/dutch_ylscnz.jpg')`, backgroundSize: "cover"}}></div>
-          <div className="side back">Read the first chapter</div>
+          <div className="side back">Read an excerpt</div>
         </div>
       </div>
 
       <div className="flip-container book">
         <div className="flip">
           <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546537/dovalfon/german_btg1vv.jpg')`, backgroundSize: "cover"}}></div>
-          <div className="side back">Read the first chapter</div>
+          <div className="side back">Read an excerpt</div>
         </div>
       </div>
 
       <div className="flip-container book">
         <div className="flip">
           <div className="side" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584546539/dovalfon/spanish_nauri5.png')`, backgroundSize: "cover"}}></div>
-          <div className="side back">Read the first chapter</div>
+          <div className="side back">Read an excerpt</div>
         </div>
       </div>
 
