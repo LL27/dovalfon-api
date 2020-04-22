@@ -43,14 +43,12 @@ class ListedReview extends React.Component {
       }
   }
 
-  function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+
       return (
     <div id={id} key={id} className="review-card container" data-aos="fade-up">
       <div className="card-infos">
         <div className="text">
-        {makeParagraphs(capitalizeFirstLetter(excerpt), "small-text")}</div>
+        {makeParagraphs(excerpt, "small-text")}</div>
 
       </div>
       <div className="credit-line"> {creditLine()}</div>
