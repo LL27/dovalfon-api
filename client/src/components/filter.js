@@ -10,7 +10,7 @@ class Filter extends React.Component {
    const { language } = this.state;
 
   return (
-    <div className="container mb-3">
+    <div className="container mb-3 mt-3 ml-5">
       <form className="form-horizontal" noValidate
             onChange={() => setTimeout(() => this.props.updateFilter(this.state), 0)}>
         <select className="custom-select select-menu"

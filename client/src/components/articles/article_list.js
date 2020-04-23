@@ -33,20 +33,18 @@ const ArticleList = (props) => {
         </div>)
     } else {
       return (
-        <React.Fragment>
-          <Filter updateFilter={updateFilter}
+          <div className="d-flex flex-wrap justify-content-center">
+           <Filter updateFilter={updateFilter}
                  languages={articles
                  .map(article => article.language.split(' ')[0])
                  .filter((item, i, arr) => arr.indexOf(item) === i)}
           />
-          <div className="d-flex flex-wrap justify-content-center">
             {articlesByLanguage
               .filter(item => item.tag.startsWith(props.articleTag))
               .map(article => (
                 renderListedArticle(article)
             ))}
            </div>
-          </React.Fragment>
         )
       }
     }
