@@ -254,14 +254,20 @@ a.nav-link {
   text-decoration: none;
   padding: 0;
   margin: 0px 6px;
-  height: 40px;
 }
 
 a.nav-link:hover {
   opacity: 1;
-  border-bottom: black solid 2px;
   transition: all 70ms;
 }
+
+a.nav-link[aria-current]{
+  opacity: 1;
+  background-color: rgb(241, 226, 9);
+  color: black;
+  transition: all 70ms;
+}
+
 .article-list {
   display: flex !important;
   flex-wrap: wrap !important;
