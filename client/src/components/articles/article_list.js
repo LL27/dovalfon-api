@@ -51,7 +51,7 @@ const ArticleList = (props) => {
       }
     }
   const containerClass = classNames({
-    'content': true,
+    'page': true,
     'reviews-container': props.articleTag === "Review",
      'wide-container': props.articleTag === "News",
     'container-fluid': props.articleTag === "Interview"

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Contact = () => (
-  <div className="content">
+  <div className="page">
     <h2>Contact</h2>
   </div>
 );

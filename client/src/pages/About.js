@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const About = () => {
 
    return (
-        <div className="wrapper content">
+        <div className="wrapper">
     <div className="about-image">
       <div className="about-text">
           <p>Dov Alfon, brought up in Paris and Tel Aviv, is a former

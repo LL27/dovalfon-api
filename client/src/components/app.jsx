@@ -20,11 +20,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="content">
+      <div className="app-container">
        <Navbar/>
            {this.props.children}
         <ScrollToTop showUnder={160}>
-         <FontAwesomeIcon icon={faArrowAltCircleUp} size="2x"/>
+          <FontAwesomeIcon icon={faArrowAltCircleUp} size="2x"/>
         </ScrollToTop>
          <Footer />
       </div>

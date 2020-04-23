@@ -8,7 +8,7 @@ font-family: "Roboto Mono", "monospace";
   background-color: white
 
 }
-.content {
+.app-container {
   min-height: calc(100vh - 250px);
 
 
