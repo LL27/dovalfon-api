@@ -79,11 +79,11 @@ $font-size-base: 1rem;
   color: #373331;
   font-weight: 600;
   h1 {
-     font-size: 3rem;
+     font-size: 2rem;
      margin: 2rem 0;
   }
   .subtitle {
-     font-size: 1.5rem;
+     font-size: 1.2rem;
   }
   .source {
 
@@ -220,13 +220,16 @@ select:focus {
   padding: 0.5rem 1rem;
 }
 
+.site-nav {
+  padding-bottom: 1rem;
+}
+
 .external-link {
   color: inherit;
 }
 .external-link:hover {
   text-decoration: underline;
     color: inherit;
-
 
 }
 
@@ -261,6 +264,7 @@ a.nav-link {
   text-decoration: none;
   padding: 0;
   margin: 0px 6px;
+  font-size: 1rem
 }
 
 a.nav-link:hover {
@@ -559,42 +563,47 @@ background-position: center center;
 
 .hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  background-color: rgb(32, 32, 32);
+background-image: linear-gradient(rgba(30,30,30,0.9),rgba(0,0,0,0.9)), url(https://res.cloudinary.com/litall/image/upload/v1587859677/dovalfon/passerellesimonedebeauvoir_dnqk3t.jpg);
+ color: white;
   padding: 36px 26px;
-  h2 {
-  }
+
 }
 
-.hero-left .book-image{
+.hero-left {
   margin: 0 auto;
-  height: 560px;
-  width: 376px;
-  background-size: cover;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  width: 100%;
+  height: auto;
+  margin-bottom: 26px;
+ //box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
 
+.book-image {
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-right {
   //background-color: white;
-
   width: 100%;
   padding: 0px;
-  flex-grow: 2;
+  flex-grow: 3;
+  margin-bottom: 26px;
   border-radius: 3px;
-  .text {
-    padding: 0 25px;
+  .hero-text {
+    padding: 0 15px;
      margin: 0 auto;
   }
+  .hero-right-title {
+    display: none;
 
-}
-.hero-left {
-  flex-grow: 0;
-  width: 100%;
-}
-
-.hero-left, .hero-right {
-  height: auto;
-  margin-bottom: 26px;
+  }
+  .hero-right-title h2 {
+    background: white;
+  }
 }
 .translations {
   display: flex;
@@ -602,8 +611,6 @@ background-position: center center;
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 26px;
-
-
   .book {
     width: 130px;
     height: 200px;
@@ -659,21 +666,44 @@ background-position: center center;
     }
   }
   .logo a {
-    font-size: 72px;
+    font-size: 64px;
   }
   .navbar-lewagon {
-
-  justify-content: center;
-
-
+    justify-content: center;
   }
   .navbar {
     top: -16px;
   }
+
+  .hero-right {
+    max-width: 100%;
+  }
+  .hero-left, .hero-middle {
+    max-width: 50%;
+    height: 500px;
+
+  }
+
 }
 
+@media (min-width: 768px) {
+
+
+}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 992px){
+  .hero-middle {
+    display: none;
+  }
+  .hero-left {
+    max-width: 40%;
+  }
+  .hero-right {
+    max-width: 60%;
+     .hero-right-title {
+    display: block;
+  }
+  }
 
   .banner {
     height: 65vh;
@@ -681,37 +711,20 @@ background-position: center center;
       font-size: 56px,
     }
   }
-    .hero-right {
-    max-width: 400px;
-  }
-    .hero-left, .hero-left .book-image {
-    max-width: 400px;
-  }
-
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 1000px) {
-
   .translations {
-
     .book {
-
       margin: 8px;
+    }
   }
-}
-
-
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    .hero-right {
-    max-width: 700px;
-  }
-   .hero-left, .hero-left .book-image {
-    max-width: 400px;
-  }
+
 }
 
 
