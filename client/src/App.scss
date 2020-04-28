@@ -700,6 +700,44 @@ background-size: cover;
 }
 
 
+// CONTACT PAGE
+
+.contact-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 70vh;
+
+  margin: 0 auto;
+  padding: 36px;
+}
+.social, .curtis, .contact-left > h1 {
+  padding: 26px;
+
+}
+.contact-left > h1 {
+  font-size: 3.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Specific CSS for your home-page
 
