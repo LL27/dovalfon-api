@@ -18,14 +18,15 @@ class Home extends Component {
    return <div className="content home">
     <div className="hero">
       <div className="hero-left" >
-        <div className="book-image" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584544373/dovalfon/book-cover-america_jx64c9.jpg')`}}></div>
+        <div className="book-image" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584544373/dovalfon/book-cover-america_jx64c9.jpg')`}}>
+        </div>
       </div>
 
       <div className="hero-middle">
-        <div className="hero-text">
-          <h2>The <em>London Times</em> #1 Best Seller</h2>
-          <h2>Winner of the CWA International Dagger</h2>
-
+        <div className="hero-middle-title">
+          <img class="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
+          <img class="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
+          <h1>The <em>London Times</em> #1 Bestseller</h1>
         </div>
       </div>
 
@@ -33,9 +34,10 @@ class Home extends Component {
 
         <div className="hero-text">
           <div className="hero-right-title">
-          <h2>The <em>London Times</em> #1 Best Seller</h2>
-          <h2>Winner of the CWA International Dagger</h2>
+           <img class="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
+          <img class="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
 
+          <h1>The <em>London Times</em> #1 Bestseller </h1>
         </div>
           <p>
             When an Israeli tech exec disappears from Charles de Gaulle airport with a woman in red, logic dictates youthful indiscretion. But Israel is on a state of high alert nonetheless. Colonel Zeev Abadi, the new head of Unit 8200's Special Section, just happens to have arrived on the same flight.

@@ -55,6 +55,7 @@ $font-size-base: 1rem;
 
   }
 }
+
 .article-show-container {
   margin: 0 auto;
   color: #373331;
@@ -188,9 +189,10 @@ select:focus {
 }
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-
 }
-
+.navbar-toggler.navbar-toggler[aria-expanded="false"]{
+  height: 0;
+}
 .navbar-toggler.navbar-toggler {
   border-color: none;
 }
@@ -221,7 +223,6 @@ select:focus {
 }
 
 .site-nav {
-  padding-bottom: 1rem;
 }
 
 .external-link {
@@ -339,7 +340,7 @@ a.nav-link[aria-current]{
 .praises {
 
   background-color: rgb(241, 227, 11);
-  padding: 80px 30px;
+  padding: 26px 26px;
   display: flex;
   flex-wrap: wrap;
   vertical-align: flex-end;
@@ -561,12 +562,15 @@ background-position: center center;
   background-color: rgb(254, 255, 251);
 }
 
+// HERO
+
 .hero {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: rgb(32, 32, 32);
-background-image: linear-gradient(rgba(30,30,30,0.9),rgba(0,0,0,0.9)), url(https://res.cloudinary.com/litall/image/upload/v1587859677/dovalfon/passerellesimonedebeauvoir_dnqk3t.jpg);
+background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(https://res.cloudinary.com/litall/image/upload/v1587902087/dovalfon/passerelle_2_ruxni2.jpg);
+background-size: cover;
+  background-position: center;
  color: white;
   padding: 36px 26px;
 
@@ -585,6 +589,31 @@ background-image: linear-gradient(rgba(30,30,30,0.9),rgba(0,0,0,0.9)), url(https
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 16px;
+  position: relative;
+}
+.cwa-badge {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin: 16px 0px;
+  position: absolute;
+  top: -16px;
+  right: 0;
+}
+.cwa-badge-middle {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  margin: 16px 0px;
+
+}
+.aller-retour {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 90px;
+  width: 90px;
+  margin-right: 16px;
 }
 .hero-right {
   //background-color: white;
@@ -594,23 +623,40 @@ background-image: linear-gradient(rgba(30,30,30,0.9),rgba(0,0,0,0.9)), url(https
   margin-bottom: 26px;
   border-radius: 3px;
   .hero-text {
-    padding: 0 15px;
+    padding: 0;
      margin: 0 auto;
   }
   .hero-right-title {
     display: none;
 
   }
-  .hero-right-title h2 {
-    background: white;
+  .hero-right-title > * {
+    color: rgb(255,255,255);
+    text-shadow: 2px 2px 4px rgba(0,0,0, .7);
+    font-size: 2.4rem;
   }
 }
+.hero-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0px;
+  .hero-middle-title > * {
+  color: rgb(255,255,255);
+  text-shadow: 2px 2px 4px rgba(0,0,0, .7);
+  font-size: 2.4rem;
+
+  }
+
+}
+
 .translations {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 26px;
+  margin-top: 26px;
   .book {
     width: 130px;
     height: 200px;
@@ -692,9 +738,16 @@ background-image: linear-gradient(rgba(30,30,30,0.9),rgba(0,0,0,0.9)), url(https
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 992px){
-  .hero-middle {
+ .hero-middle {
+  display: none;
+
+  .hero-middle-title > * {
     display: none;
+
   }
+
+}
+
   .hero-left {
     max-width: 40%;
   }
