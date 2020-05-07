@@ -6,10 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 class ListedReview extends React.Component {
-  constructor(props){
-    super(props);
 
-  }
   componentDidMount(){
     AOS.init({
       duration : 1000
@@ -21,12 +18,12 @@ class ListedReview extends React.Component {
     if (!this.props.article) {
     return null
     }
-    const { id, quote, excerpt, credit, source, url } = this.props.article
+    const { id, excerpt, credit, source, url } = this.props.article
 
      const creditLine = () => {
     if (url) {
       return <p className="review-credit">
-              {checkForCredit()} <a href={`${url}`} className="external-link" target="_blank"><em>{source}</em> <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+              {checkForCredit()} <a href={`${url}`} className="external-link" target="_blank" rel="noopener noreferrer"><em>{source}</em> <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
               </p>
     } else {
       return <p className="review-credit">{checkForCredit()}<em>{source}</em></p>;

@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from "@reach/router";
+import Navbar from '../components/Navbar';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 class Home extends Component {
-  constructor(props){
-    super(props);
-  }
+
   componentDidMount(){
     AOS.init({
       duration : 1000
@@ -15,7 +13,9 @@ class Home extends Component {
   }
 
   render() {
-   return <div className="content home">
+   return <React.Fragment>
+  <Navbar color="white"/>
+   <div className="content home">
     <div className="hero">
       <div className="hero-left" >
         <div className="book-image" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1584544373/dovalfon/book-cover-america_jx64c9.jpg')`}}>
@@ -24,8 +24,8 @@ class Home extends Component {
 
       <div className="hero-middle">
         <div className="hero-middle-title">
-          <img class="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
-          <img class="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
+          <img className="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
+          <img className="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
           <h1>The <em>London Times</em> #1 Bestseller</h1>
         </div>
       </div>
@@ -34,8 +34,8 @@ class Home extends Component {
 
         <div className="hero-text">
           <div className="hero-right-title">
-           <img class="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
-          <img class="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
+           <img className="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
+          <img className="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
 
           <h1>The <em>London Times</em> #1 Bestseller </h1>
 
@@ -174,6 +174,7 @@ UIT HET BOEK</a></div>
 
 
       </div>
+      </React.Fragment>
   }
 }
 

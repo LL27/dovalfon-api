@@ -10,7 +10,7 @@ const SingleArticleDetails = ({ article }) => {
     return null
   }
 
-  const { id, title, content, video_url, source, photos, tag, subtitle, pub_date } = article
+  const { id, title, content, video_url, source, photos, subtitle, pub_date } = article
 
   return (
 
@@ -21,8 +21,8 @@ const SingleArticleDetails = ({ article }) => {
             <h1>{title}</h1>
             <p className="subtitle">{subtitle}</p>
           </header>
-          <RenderImages photos={photos} />
-          <RenderVideo video_url={video_url}/>
+          <RenderImages photos={photos} altText={title}/>
+          <RenderVideo video_url={video_url} title={title}/>
           <div className="text">
             {makeParagraphs(content)}
           </div>

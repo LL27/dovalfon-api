@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "@reach/router";
 import RenderThumbnailMedia from "../render_thumbnail_media";
 import classNames from 'classnames'
-import sizeByLength from "../../helpers/size_by_length";
 
 const ListedArticle = ({article}) => {
   if (!article) {

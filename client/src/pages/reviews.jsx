@@ -1,11 +1,11 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 import ArticleList from '../components/articles/article_list';
 
 const Reviews = () => (
-    <div>
-      <div className="banner" style={{backgroundImage: `url('https://res.cloudinary.com/litall/image/upload/v1587589378/dovalfon/reviews-banner-3_dcigih.png')` }}>
-      </div>
+    <div className="reviews-page">
+      <Navbar/>
       <ArticleList articleTag="Review"/>
     </div>
 

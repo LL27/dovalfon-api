@@ -9,25 +9,28 @@ class Navbar extends Component {
 
 
       return <div className="site-nav">
-        <div className="logo">
+
+
+        <div className="navbar navbar-expand-sm navbar-lewagon">
+               <div className={this.props.color === "white" ? "logo logo-white" : "logo logo-black"}>
           <Link to="/" className="d-flex justify-content-center">
             dov alfon
           </Link>
         </div>
-
-        <div className="navbar navbar-expand-sm navbar-lewagon">
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
 
 
+
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
+            <ul className={this.props.color === "white" ? "navbar-nav mr-auto navbar-white" : "navbar-nav mr-auto"}>
             <li className="nav-item">
               <Link to="/" className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">Biography</Link>
+              <Link to="/biography" className="nav-link">Biography</Link>
             </li>
             {/*<li className="nav-item">
              <Link to="/projects" className="nav-link">Projects</Link>

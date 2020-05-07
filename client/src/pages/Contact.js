@@ -1,22 +1,27 @@
 import React from 'react'
+import Navbar from '../components/Navbar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 
 const Contact = () => (
-  <div className="contact-page-wrapper container">
+  <div className="contact-page-wrapper">
+  <Navbar/>
     <div className="contact-page">
-      <div className="contact-left box-card">
+      <div className="contact-card">
+
+
+      <div className="contact-left box-card-contact">
         <h1>GET <br/>IN <br/>TOUCH</h1>
       </div>
 
 
-      <div className="contact-right box-card">
+      <div className="contact-right box-card-contact">
         <div className="social">
 
-          On Twitter: <a href="https://twitter.com/dovalfon"><FontAwesomeIcon icon={faTwitter} /></a> //
-          On Instagram: <a href="https://www.instagram.com/dovalfon/?hl=fr"><FontAwesomeIcon icon={faInstagram} /></a> //
+          On Twitter: <a href="https://twitter.com/dovalfon"><FontAwesomeIcon icon={faTwitter} /></a> /
+          On Instagram: <a href="https://www.instagram.com/dovalfon/?hl=fr"><FontAwesomeIcon icon={faInstagram} /></a> /
           On Facebook:  <a href="https://www.facebook.com/dovalfon"><FontAwesomeIcon icon={faFacebook} /></a>
         </div>
 
@@ -27,6 +32,7 @@ const Contact = () => (
         </div>
 
     </div>
+      </div>
    </div>
   </div>
 );

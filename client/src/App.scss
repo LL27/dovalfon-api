@@ -14,15 +14,19 @@ $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $font-size-base: 1rem;
 
-.box-card {
+.box-card, .box-card-contact {
   overflow: hidden;
   border: none;
   border-radius: 3px;
   max-width: 380px;
+  margin: 26px;
+  padding: 16px;
+  background: white;
 
-  margin: 10px;
-  //background: white;
-  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.box-card {
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
 
 .box-card > img {
@@ -40,11 +44,15 @@ $font-size-base: 1rem;
   opacity: .7;
   margin: 0;
 }
-.banner {
-  position: relative;
-  height: 30vh;
+/* .banner {
+  background-image: url(https://res.cloudinary.com/litall/image/upload/c_fill,e_art:aurora,h_681,y_0/v1588593252/dovalfon/reviews-banner-3_krnecr.png);
+  background-position: center;
   background-size: contain;
   background-repeat-y: no-repeat;
+  padding: 36px 26px;
+  padding-top: 150px;
+  position: relative;
+  height: auto;
   h2 {
     position: absolute;
     top: 35%;
@@ -54,7 +62,7 @@ $font-size-base: 1rem;
     font-weight: bold;
 
   }
-}
+}*/
 
 .article-show-container {
   margin: 0 auto;
@@ -166,6 +174,10 @@ select:focus {
   outline:none;
 }
 
+// News Page
+.news-page, .reviews-page, .interviews-page, .reviews-container {
+  background-image: url(https://res.cloudinary.com/litall/image/upload/c_scale,e_brightness:70,w_1543/v1588867026/dovalfon/bg_w3sdzn.png);
+}
 
 
 .navbar-lewagon .navbar-collapse {
@@ -176,22 +188,21 @@ select:focus {
   }
 
 }
-
+.navbar-white {
+  color: white;
+}
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
 .navbar {
     //position: fixed;
     width: 100%;
-    top: -50px;
+
     padding-top: 0;
     padding-bottom: 0;
 }
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-.navbar-toggler.navbar-toggler[aria-expanded="false"]{
-  height: 0;
 }
 .navbar-toggler.navbar-toggler {
   border-color: none;
@@ -199,20 +210,46 @@ select:focus {
 .navbar-toggler.navbar-toggler:focus {
   outline: none;
 }
+/*.navbar-toggler.navbar-toggler[aria-expanded="false"]{
+  height: 0;
+}
+
+.navbar-collapse.collapse.show {
+  background-color: gray;
+  transition: all ease-in-out 400ms;
+}
+*/
 .logo {
   padding-top: 0px;
   background: white;
 
+
 }
 .logo a {
+  width: 100%;
+  display: block;
   font-size: 42px;
   font-family: $logo-font;
   color: #292b29;
   line-height: 1.6;
   opacity: 1;
   &:hover {
-    color: #292b29;
     text-decoration: none;
+  }
+}
+.logo-white a {
+  color: white;
+    &:hover {
+    color: white;
+
+  }
+}
+
+.logo-black a {
+  color: black;
+  &:hover {
+    color: #292b29;
+
   }
 }
 
@@ -240,9 +277,11 @@ select:focus {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  height: 100px;
   padding: 0px 50px;
   color: #373331;
+}
+.footer, .push {
+  height: 100px;
 }
 .footer-links {
   display: flex;
@@ -260,7 +299,7 @@ select:focus {
 }
 
 a.nav-link {
-  color: black;
+  color: inherit;
   opacity: 0.8;
   text-decoration: none;
   padding: 0;
@@ -536,7 +575,7 @@ background-position: center center;
       background-attachment: fixed;
   display: flex;
   flex-direction: row-reverse;
-  height: 500px;
+  min-height: 500px;
   padding: 20px;
 
 }
@@ -552,7 +591,7 @@ background-position: center center;
 .about-text {
   //background-color: white;
 
-  padding: 0 20px;
+  padding: 150px 20px;
   width: 50vw;
   p {
     color: white;
@@ -561,25 +600,38 @@ background-position: center center;
 
 
 .about-image, .about-text {
+
+}
+.about-wrapper {
   height: auto;
+  margin-top: -130px;
 }
 
 
-.home {
+ .reviews-page, .home {
   background-color: rgb(254, 255, 251);
 }
+.home {
+     margin-top: -150px;
+
+}
+
+// Contact page
+
 
 // HERO
 
 .hero {
+
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(https://res.cloudinary.com/litall/image/upload/v1587902087/dovalfon/passerelle_2_ruxni2.jpg);
+background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%), url(https://res.cloudinary.com/litall/image/upload/v1587902087/dovalfon/passerelle_2_ruxni2.jpg);
 background-size: cover;
   background-position: center;
  color: white;
   padding: 36px 26px;
+  padding-top: 150px;
 
 }
 
@@ -708,15 +760,24 @@ background-size: cover;
 
 
 // CONTACT PAGE
+.contact-page-wrapper {
+  background-image: url(https://res.cloudinary.com/litall/image/upload/c_scale,w_1543/v1588867026/dovalfon/bg_w3sdzn.png);
 
+}
 .contact-page {
-  display: flex;
+display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 70vh;
-
   margin: 0 auto;
   padding: 36px;
+}
+.contact-card {
+display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 700px;
+
+  background-color: white;
 }
 .social, .curtis, .contact-left > h1 {
   padding: 26px;
@@ -750,20 +811,20 @@ background-size: cover;
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .banner {
-    height: 50vh;
-    h2 {
-      font-size: 48px,
-    }
-  }
+  //.banner {
+  //  height: 50vh;
+  //  h2 {
+    //  font-size: 48px,
+  //  }
+  //}
   .logo a {
-    font-size: 64px;
+    font-size: 56px;
   }
   .navbar-lewagon {
     justify-content: center;
   }
   .navbar {
-    top: -16px;
+    top: 16px;
   }
 
   .hero-right {
@@ -803,12 +864,12 @@ background-size: cover;
   }
   }
 
-  .banner {
+  /*.banner {
     height: 65vh;
     h2 {
       font-size: 56px,
     }
-  }
+  }*/
 }
 
 // Large devices (desktops, 992px and up)

@@ -7,7 +7,7 @@ class Filter extends React.Component {
   };
 
   render() {
-   const { language } = this.state;
+
 
   return (
     <div className="container mb-3 mt-3 ml-5">
