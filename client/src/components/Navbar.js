@@ -12,7 +12,7 @@ class Navbar extends Component {
 
 
         <div className="navbar navbar-expand-sm navbar-lewagon">
-               <div className={this.props.color === "white" ? "logo logo-white" : "logo logo-black"}>
+         <div className={this.props.color === "white" ? "logo logo-white" : "logo logo-black"}>
           <Link to="/" className="d-flex justify-content-center">
             dov alfon
           </Link>

@@ -122,10 +122,14 @@ $font-size-base: 1rem;
   padding: 25px;
   width: 100%;
 }
+.box-card .card-infos {
+  padding-top: 16px;
+}
 .wide-card .card-infos {
   padding: 4px;
   max-width: 800px;
   margin: 0 auto;
+
 
 }
 .review-credit {
@@ -182,6 +186,7 @@ select:focus {
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+
   .no-ajax-nav-link {
     padding-right: 0;
     padding-left: 0;
@@ -192,11 +197,11 @@ select:focus {
   color: white;
 }
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: auto;
 }
 .navbar {
     //position: fixed;
-    width: 100%;
+    width: auto;
 
     padding-top: 0;
     padding-bottom: 0;
@@ -210,7 +215,7 @@ select:focus {
 .navbar-toggler.navbar-toggler:focus {
   outline: none;
 }
-/*.navbar-toggler.navbar-toggler[aria-expanded="false"]{
+/*.navbar-toggler.navbar-toggler[aria-expanded="true"]{
   height: 0;
 }
 
@@ -221,13 +226,11 @@ select:focus {
 */
 .logo {
   padding-top: 0px;
-  background: white;
 
 
 }
 .logo a {
-  width: 100%;
-  display: block;
+
   font-size: 42px;
   font-family: $logo-font;
   color: #292b29;
@@ -260,6 +263,7 @@ select:focus {
 }
 
 .site-nav {
+background-color: none
 }
 
 .external-link {
@@ -819,12 +823,18 @@ display: flex;
   //}
   .logo a {
     font-size: 56px;
+    width: 100%;
+  display: block;
   }
   .navbar-lewagon {
-    justify-content: center;
+    display: block;
+  }
+  .navbar-nav {
+    width: auto;
+    margin: 0 auto;
   }
   .navbar {
-    top: 16px;
+    padding-top: 16px;
   }
 
   .hero-right {
