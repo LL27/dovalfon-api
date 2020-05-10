@@ -48,6 +48,7 @@ const ArticleList = (props) => {
         )
       }
     }
+
   const containerClass = classNames({
     'page': true,
     'reviews-container': props.articleTag === "Review",
@@ -61,6 +62,7 @@ const ArticleList = (props) => {
         <ArticlesConsumer>
         {({ articles, articlesByLanguage, updateFilter }) => (
            <div className={containerClass}>
+                <div className="quote"></div>
                 {renderFilter(articles, articlesByLanguage, updateFilter)}
             </div>
           )}

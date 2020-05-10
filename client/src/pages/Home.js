@@ -52,7 +52,12 @@ class Home extends Component {
       </div>
     </div>
       <div className="praises">
-
+    <div className="praise" data-aos="fade-up">
+      <p>
+      “Stellar debut...Alfon has created a mesmerizingly real world. Fans of espionage thrillers will hope to see a lot more from this talented author”
+      </p>
+      <small className="credit">Publishers Weekly</small>
+    </div>
     <div className="praise" data-aos="fade-up">
       <p>
       “A deeply enjoyable espionage thriller with plenty of juicy details about modern spycraft.”

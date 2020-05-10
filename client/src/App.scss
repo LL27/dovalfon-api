@@ -155,7 +155,12 @@ height: auto;
   margin: 0 auto;
  background-color: rgb(254, 255, 251);
  padding: 0 10%;
+  .quote {
+height: 100px;
+width: 100px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 
+  }
 }
 
 .wide-container {
@@ -765,7 +770,7 @@ background-size: cover;
 
 // CONTACT PAGE
 .contact-page-wrapper {
-  background-image: url(https://res.cloudinary.com/litall/image/upload/c_scale,w_1543/v1588867026/dovalfon/bg_w3sdzn.png);
+  background-image: url(https://res.cloudinary.com/litall/image/upload/c_scale,e_brightness:43,w_1543/v1588867026/dovalfon/bg_w3sdzn.png);
 
 }
 .contact-page {
