@@ -1,6 +1,9 @@
 // "details" page
 import * as React from 'react'
 import SingleArticleDetails from './single_article_details'
+import Navbar from '../../components/Navbar';
+
+
 
 import {
   ArticlesProvider,
@@ -9,6 +12,8 @@ import {
 
 const SingleArticle = ({ articleId }) => {
   return (
+      <React.Fragment>
+        <Navbar/>
         <ArticlesProvider>
           <ArticlesConsumer>
             {({ getArticleByArticleId }) => (
@@ -16,6 +21,7 @@ const SingleArticle = ({ articleId }) => {
             )}
           </ArticlesConsumer>
         </ArticlesProvider>
+        </React.Fragment>
   )
 }
 export default SingleArticle
