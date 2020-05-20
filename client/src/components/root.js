@@ -23,7 +23,6 @@ const Root = () => (
       <Home path="/" />
       <About path="/biography" />
       <Interviews path="/interviews" />
-        <SingleArticle path="interviews/:articleId" />
       <Reviews path="/reviews" />
       <News path="/news" />
         <SingleArticle path="newss/:articleId" />
