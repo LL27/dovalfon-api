@@ -1,7 +1,6 @@
 // "listing"
 import React from "react";
 import { Link } from "@reach/router";
-import RenderThumbnailMedia from "../render_thumbnail_media";
 import classNames from 'classnames'
 
 const ListedArticle = ({article}) => {
@@ -10,7 +9,13 @@ const ListedArticle = ({article}) => {
   }
   const { id, title, video_url, source, tag, photos } = article
 
-
+  const renderPhotos = () => {
+    if (photos && photos.length > 0)  {
+      return  <img src={photos[0].url} key={photos[0].id} alt={photos[0].id} className="img-fluid" />
+    }  else {
+      return null;
+    }
+  }
   const cardClass = classNames({
     'wide-card': tag === "News",
     'box-card': tag === "Interview"
@@ -18,7 +23,7 @@ const ListedArticle = ({article}) => {
 
   return (
     <div id={id} key={id} className={cardClass}>
-      <RenderThumbnailMedia video_url={video_url} photos={photos} />
+      {renderPhotos()}
       <div className="card-infos">
         <Link to={`/${article.tag.toLowerCase()}s/${id}`}>
           <h4>{title}</h4>
