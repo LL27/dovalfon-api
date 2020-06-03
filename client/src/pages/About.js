@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import SiteHeader from '../components/SiteHeader';
 
 const About = () => {
 
    return (
       <React.Fragment>
-      <Navbar color="white"/>
+      <SiteHeader color="white"/>
       <div className="about-wrapper">
 
   <div className="about-image">

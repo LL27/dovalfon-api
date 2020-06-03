@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
+import SiteHeader from '../components/SiteHeader';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
@@ -7,7 +7,7 @@ import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg
 
 const Contact = () => (
   <div className="contact-page-wrapper">
-  <Navbar/>
+  <SiteHeader/>
     <div className="contact-page">
       <div className="contact-card">
 

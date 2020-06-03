@@ -13,7 +13,93 @@ $logo-font: "IBM Plex Serif", "serif";
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $font-size-base: 1rem;
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 28px;
+  height: 22px;
+  right: 12px;
+  top: 32px;
+}
 
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #8c9397;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #8c9397;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #8c9397;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+
+
+
+
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #ffffff;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+a.bm-item {
+  display: inline-block;
+   color: black;
+  text-decoration: none;
+  padding: 0;
+  margin: 0px 6px;
+  font-size: 1rem;
+    &:hover {
+    background-color: #f1e30b;
+    transition: all 70ms;
+  }
+  &:active {
+    background-color: #f1e30b;
+    transition: all 70ms;
+  }
+
+}
+
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0);
+}
 .box-card, .box-card-contact {
   overflow: hidden;
   border: none;
@@ -152,7 +238,6 @@ height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
  background-color: rgb(254, 255, 251);
  padding: 0 10%;
 
@@ -224,21 +309,23 @@ select:focus {
   transition: all ease-in-out 400ms;
 }
 */
+
 .logo {
-  padding-top: 0px;
-
-
+  background: white;
 }
 .logo a {
 
   font-size: 42px;
   font-family: $logo-font;
   color: #292b29;
-  line-height: 1.6;
+  line-height: 2.1;
   opacity: 1;
   &:hover {
     text-decoration: none;
   }
+}
+.logo .logo-white {
+  background: transparent;
 }
 .logo-white a {
   color: white;
@@ -248,7 +335,9 @@ select:focus {
   }
 }
 
+
 .logo-black a {
+
   color: black;
   &:hover {
     color: #292b29;
@@ -361,14 +450,15 @@ a.nav-link[aria-current]{
 }
 
 .scroll {
-  font-size: 28px;
+  font-size: 34px;
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   text-align: center;
   border-radius: 50%;
 
   position: fixed;
+  padding-top: 20px;
   bottom: 30px;
   right: 30px;
   transition:
@@ -386,6 +476,7 @@ a.nav-link[aria-current]{
   opacity: 1;
 }
 .scroll_To_Top:active {
+
 }
 .praises {
 
@@ -611,6 +702,7 @@ background-position: top -30px left -240px;
 }
 
 
+
  .reviews-page, .home {
   background-color: rgb(254, 255, 251);
 }
@@ -629,6 +721,7 @@ background-position: top -30px left -240px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: flex-start;
 background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%), url(https://res.cloudinary.com/litall/image/upload/v1587902087/dovalfon/passerelle_2_ruxni2.jpg);
 background-size: cover;
   background-position: center;
@@ -700,13 +793,20 @@ background-size: cover;
 }
 .hero-middle {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   margin-left: 0px;
+  margin-right: 15px;
+  margin-top: 54px;
+  width: 100%;
+  .hero-middle-title {
+    width: inherit;
+  }
   .hero-middle-title > * {
+
   color: rgb(255,255,255);
   text-shadow: 2px 2px 4px rgba(0,0,0, .7);
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 
   }
 
@@ -764,7 +864,7 @@ background-size: cover;
 
 // CONTACT PAGE
 .contact-page-wrapper {
-  background-image: url(https://res.cloudinary.com/litall/image/upload/c_scale,e_brightness:43,w_1543/v1588867026/dovalfon/bg_w3sdzn.png);
+  background-image: url(https://res.cloudinary.com/litall/image/upload/c_scale,e_brightness:70,w_1543/v1588867026/dovalfon/bg_w3sdzn.png);
 
 }
 .contact-page {
@@ -813,9 +913,17 @@ display: flex;
     //  font-size: 48px,
   //  }
   //}
+  .bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 28px;
+  right: 18px;
+  top: 56px;
+}
 
   .logo a {
     font-size: 56px;
+    line-height: 2.4em;
     width: 100%;
   display: block;
   }
@@ -831,12 +939,14 @@ display: flex;
   }
 
   .hero-right {
-    max-width: 100%;
+    width: 100%;
   }
   .hero-left, .hero-middle {
-    max-width: 50%;
-    height: 500px;
+    max-width: 40%;
 
+  }
+  .hero-middle .hero-middle-title > *{
+    font-size: 2.2em;
   }
 
 }

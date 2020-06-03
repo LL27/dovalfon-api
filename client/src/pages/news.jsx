@@ -1,11 +1,11 @@
 import React from 'react';
 import ArticleList from '../components/articles/article_list';
-import Navbar from '../components/Navbar';
+import SiteHeader from '../components/SiteHeader';
 
 
 const News = () => (
   <div className="news-page">
-    <Navbar/>
+    <SiteHeader/>
     <ArticleList articleTag="News"/>
 
   </div>

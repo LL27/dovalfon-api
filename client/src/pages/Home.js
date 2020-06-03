@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
+import SiteHeader from '../components/SiteHeader';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -14,7 +14,7 @@ class Home extends Component {
 
   render() {
    return <React.Fragment>
-  <Navbar color="white"/>
+  <SiteHeader color="white"/>
    <div className="content home">
     <div className="hero">
       <div className="hero-left" >
@@ -26,7 +26,7 @@ class Home extends Component {
         <div className="hero-middle-title">
           <img className="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
           <img className="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
-          <h1>The <em>London Times</em> #1 Bestseller</h1>
+          <h1>THE <em>LONDON TIMES</em> <br/>#1 BESTSELLER</h1>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ class Home extends Component {
            <img className="aller-retour" src="https://res.cloudinary.com/litall/image/upload/v1588067726/aller-retour_xqtuxs.png" alt="Prix Marianne"/>
           <img className="cwa-badge-middle" src="https://res.cloudinary.com/litall/image/upload/c_thumb,w_200,g_face/v1588010085/dovalfon/cwa-badge_zgqmpw.jpg" alt="Crime Writers' Association International Daggers Award"/>
 
-          <h1>The <em>London Times</em> #1 Bestseller </h1>
+          <h1>THE <em>LONDON TIMES</em> <br/>#1 BESTSELLER</h1>
 
         </div>
           <p>

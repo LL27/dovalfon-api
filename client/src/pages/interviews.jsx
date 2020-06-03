@@ -1,10 +1,11 @@
 import React from 'react';
 import ArticleList from '../components/articles/article_list';
-import Navbar from '../components/Navbar';
+import SiteHeader from '../components/SiteHeader';
 
 const Interviews = () => (
   <div className="interviews-page">
-  <Navbar/>
+  <SiteHeader/>
+
     <ArticleList articleTag="Interview"/>
   </div>
 
