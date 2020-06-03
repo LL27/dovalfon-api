@@ -16,7 +16,7 @@ const App = (props) => {
           <FontAwesomeIcon icon={faArrowAltCircleUp} size="2x"/>
         </ScrollToTop>
 
-        <div class="push"></div>
+        <div className="push"></div>
       </div>
       <Footer />
   </React.Fragment>

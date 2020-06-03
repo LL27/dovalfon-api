@@ -404,7 +404,7 @@ a.nav-link[aria-current]{
     max-width: 500px;
     display: inline-flex;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 0px 25px;
     margin-bottom: 78px;
@@ -569,9 +569,8 @@ a.nav-link[aria-current]{
 
 
 .about-image  {
-background: url('https://res.cloudinary.com/litall/image/upload/v1584544494/dovalfon/DovAlfon03a_by_Assaf_Matarasso_mojio8.jpg') no-repeat fixed;
-
-background-position: center center;
+background-image: url(https://res.cloudinary.com/litall/image/upload/v1591194047/dovalfon/DovAlfon03a_by_Assaf_Matarasso_mojio8.jpg);
+background-position: top -30px left -240px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -795,20 +794,13 @@ display: flex;
 
 
 
+@media (min-width: 420px) {
+ .about-image  {
+    background-position: center center;
 
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 // Specific CSS for your home-page
@@ -821,6 +813,7 @@ display: flex;
     //  font-size: 48px,
   //  }
   //}
+
   .logo a {
     font-size: 56px;
     width: 100%;
