@@ -19,7 +19,7 @@ const App = (props) => {
           style={{
             position: "fixed",
             bottom: 25,
-            right: 50,
+            right: 20,
             cursor: "pointer",
             transitionDuration: "0.2s",
             transitionTimingFunction: "linear",

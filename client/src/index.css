@@ -20,7 +20,7 @@ html, body {
 .app-container {
   padding: 0px;
   min-height: 100%;
-  margin: 0 auto -150px;
+  margin: 0 auto;
 }
 
 
