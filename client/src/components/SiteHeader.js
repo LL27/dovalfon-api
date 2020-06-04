@@ -1,17 +1,14 @@
 import React from "react";
 import { Link } from "@reach/router";
-
+import SiteLogo from "./SiteLogo";
+import Navbar from "./Navbar";
 
 const SiteHeader = (props) => {
   return (
-        <div
-          className={
-            props.color === "white" ? "logo logo-white" : "logo logo-black"
-          }
-        >
-          <Link to="/" className="d-flex justify-content-center">
-            Dov Alfon
-          </Link>
+
+        <div className="site-header">
+          <SiteLogo color={props.color}/>
+           <Navbar color={props.color}/>
         </div>
 
   );

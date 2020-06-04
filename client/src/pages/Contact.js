@@ -1,16 +1,13 @@
 import React from 'react'
 import SiteHeader from '../components/SiteHeader';
 
-import Navbar from '../components/Navbar';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 
 const Contact = () => (
   <div className="contact-page-wrapper">
-  <SiteHeader/>
-    <Navbar/>
+  <SiteHeader />
 
     <div className="contact-page">
       <div className="contact-card">

@@ -8,6 +8,7 @@ class Navbar extends Component {
   render() {
 
       return <div className={this.props.color === "white" ? "navbar navbar navbar-white" : "navbar navbar-black"}>
+
               <Link to="/" className="nav-link">Home</Link>
                             <Link to="/biography" className="nav-link">Biography</Link>
               <Link to="/reviews" className="nav-link">Reviews</Link>

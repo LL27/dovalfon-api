@@ -1,6 +1,5 @@
 .navbar {
     //position: fixed;
-    max-width: 700px;
     padding-top: 0;
     padding-bottom: 0;
 
@@ -33,7 +32,7 @@ a.nav-link {
   color: inherit;
   opacity: 0.9;
   text-decoration: none;
-  padding: 0;
+  padding: .1rem .5rem;
   margin: 0px 6px;
   font-size: 1rem
 }
@@ -55,7 +54,6 @@ a.nav-link[aria-current]{
 @media (min-width: 576px) {
 
   .navbar {
-    padding-top: 16px;
     width: auto;
     margin: 0 auto;
   }

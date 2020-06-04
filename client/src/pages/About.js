@@ -6,8 +6,9 @@ const About = () => {
 
    return (
       <React.Fragment>
-      <SiteHeader color="white"/>
-           <Navbar color="white"/>
+
+          <SiteHeader color="white"/>
+
       <div className="about-wrapper">
 
   <div className="about-image">

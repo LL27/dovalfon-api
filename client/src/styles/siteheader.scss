@@ -1,3 +1,10 @@
+.site-header {
+  height: 120px;
+  margin-top: -16px;
+  margin-bottom: 46px;
+  padding-top: 20px,
+
+}
 .logo {
   background: white;
 }
@@ -6,7 +13,7 @@
   font-size: 42px;
   font-family: $logo-font;
   color: #292b29;
-  line-height: 2.1;
+  line-height: 2;
   opacity: 1;
   &:hover {
     text-decoration: none;

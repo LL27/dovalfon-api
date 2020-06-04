@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SiteHeader from "../components/SiteHeader";
-import Navbar from "../components/Navbar";
+
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -16,7 +16,6 @@ class Home extends Component {
     return (
       <React.Fragment>
         <SiteHeader color="white" />
-        <Navbar color="white" />
         <div className="content home">
           <div className="hero">
             <div className="hero-left">
