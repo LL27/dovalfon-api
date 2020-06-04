@@ -1,11 +1,13 @@
 import React from 'react';
 import SiteHeader from '../components/SiteHeader';
+import Navbar from '../components/Navbar';
 
 const About = () => {
 
    return (
       <React.Fragment>
       <SiteHeader color="white"/>
+           <Navbar color="white"/>
       <div className="about-wrapper">
 
   <div className="about-image">
@@ -32,7 +34,7 @@ const About = () => {
         He is co-editor, with writer Etgar Keret, of a new international cultural venture aiming to mix literature and cinema in a new format.
 
         His debut thriller novel was published in English as A Long Night in Paris in 2019.
-        <small>Photograph: Assaf Matarasso</small>
+        <br/><small>Photograph: Assaf Matarasso</small>
         </p>
       </div>
     </div>

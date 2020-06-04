@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "@reach/router";
+import Navbar from "./Navbar";
 
 import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 import ScrollToTop from "react-scroll-up";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,9 +13,19 @@ const App = (props) => {
   return (
     <React.Fragment>
       <div className="app-container">
-        <Navbar/>
         {props.children}
-        <ScrollToTop showUnder={160}>
+        <ScrollToTop
+          showUnder={160}
+          style={{
+            position: "fixed",
+            bottom: 25,
+            right: 50,
+            cursor: "pointer",
+            transitionDuration: "0.2s",
+            transitionTimingFunction: "linear",
+            transitionDelay: "0s",
+          }}
+        >
           <FontAwesomeIcon icon={faArrowAltCircleUp} size="2x" />
         </ScrollToTop>
 

@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import { Link } from "@reach/router";
 
-import { slide as Menu } from 'react-burger-menu'
 
-class Navbar extends React.Component {
 
-  render () {
-    return (
-      <Menu right width={ '200px' }>
-          <Link to="/" className="menu-item">Home</Link>
-        <Link to="/biography" className="menu-item">Biography</Link>
-        <Link to="/reviews" className="menu-item">Reviews</Link>
-        <Link to="/interviews" className="menu-item">Interviews</Link>
-        <Link to="/news" className="menu-item">News</Link>
-        <Link to="/contact" className="menu-item">Contact</Link>
+class Navbar extends Component {
 
-      </Menu>
-    );
+  render() {
+
+      return <div className={this.props.color === "white" ? "navbar navbar navbar-white" : "navbar navbar-black"}>
+              <Link to="/" className="nav-link">Home</Link>
+                            <Link to="/biography" className="nav-link">Biography</Link>
+              <Link to="/reviews" className="nav-link">Reviews</Link>
+               <Link to="/interviews" className="nav-link">Interviews</Link>
+            <Link to="/news" className="nav-link">News</Link>
+              <Link to="/contact" className="nav-link">Contact</Link>
+
+    </div>
   }
 }
-export default Navbar
+
+export default Navbar;
+
+
+
+
+
+

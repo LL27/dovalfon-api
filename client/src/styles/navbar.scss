@@ -1,56 +1,76 @@
-@media (min-width: 576px) {
-  .no-ajax-nav-link {
-  color: rgba(0, 0, 0, 0.5);
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-
-
-  }
-}
-
-
-.navbar-lewagon {
-  justify-content: center;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-  .no-ajax-nav-link {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
 .navbar {
     //position: fixed;
-    width: 100%;
-    top: -10px;
+    max-width: 700px;
     padding-top: 0;
-    padding-bottom: 12px;
-}
-.logo {
-  padding-top: 12px;
-  background: white;
+    padding-bottom: 0;
 
 }
-.logo a {
-  font-size: 72px;
-  font-family: $logo-font;
-  color: #292b29;
-  opacity: 1;
-  &:hover {
-    color: #292b29;
-    text-decoration: none;
-  }
+.navbar-white {
+  color: white;
 }
+
+
+
+
 
 .no-ajax-nav-link {
   color: rgba(0, 0, 0, 0.5);
   display: block;
   padding: 0.5rem 1rem;
 }
+
+
+.external-link {
+  color: inherit;
+}
+.external-link:hover {
+  text-decoration: underline;
+    color: inherit;
+
+}
+
+a.nav-link {
+  color: inherit;
+  opacity: 0.9;
+  text-decoration: none;
+  padding: 0;
+  margin: 0px 6px;
+  font-size: 1rem
+}
+
+a.nav-link:hover {
+  opacity: 1;
+  transition: all 70ms;
+}
+
+a.nav-link[aria-current]{
+  opacity: 1;
+  background-color: rgb(241, 226, 9);
+  color: black;
+  transition: all 70ms;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+  .navbar {
+    padding-top: 16px;
+    width: auto;
+    margin: 0 auto;
+  }
+  /*.banner {
+    height: 50vh;
+    h2 {
+      font-size: 48px,
+    }
+  }
+ top: 56px;
+}
+
+*/
+
+
+
+}
+
