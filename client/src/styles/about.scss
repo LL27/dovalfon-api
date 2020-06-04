@@ -1,0 +1,52 @@
+
+.about-image  {
+background-image: url(https://res.cloudinary.com/litall/image/upload/v1591194047/dovalfon/DovAlfon03a_by_Assaf_Matarasso_mojio8.jpg);
+background-position: top -30px left -240px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+
+}
+.about-content {
+    display: flex;
+  flex-direction: row-reverse;
+  min-height: 500px;
+  padding: 20px;
+}
+.about-text-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 26px;
+  width: 100vw;
+}
+
+
+.about-text {
+  //background-color: white;
+
+  padding-top: 180px;
+  width: 50vw;
+  p {
+    color: white;
+  }
+}
+
+
+
+.about-wrapper {
+  height: auto;
+  margin-top: -150px;
+}
+
+
+@media (min-width: 420px) {
+ .about-image  {
+    background-position: center center;
+
+  }
+
+}

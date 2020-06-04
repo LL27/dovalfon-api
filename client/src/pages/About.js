@@ -12,6 +12,8 @@ const About = () => {
       <div className="about-wrapper">
 
   <div className="about-image">
+<div className="about-content">
+
     <div className="about-text">
         <p>Dov Alfon, brought up in Paris and Tel Aviv, is a former
           intelligence officer of Unit 8200, the most secretive arm of the Israeli Defence
@@ -38,6 +40,7 @@ const About = () => {
         <br/><small>Photograph: Assaf Matarasso</small>
         </p>
       </div>
+    </div>
     </div>
   </div>
   </React.Fragment>
