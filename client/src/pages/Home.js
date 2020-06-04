@@ -93,78 +93,8 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="praises">
-            <div className="praise" data-aos="fade-up">
-              <p>
-                “Stellar debut...Alfon has created a mesmerizingly real world.
-                Fans of espionage thrillers will hope to see a lot more from
-                this talented author”
-              </p>
-              <small className="credit">Publishers Weekly</small>
-            </div>
-            <div className="praise" data-aos="fade-up">
-              <p>
-                “A deeply enjoyable espionage thriller with plenty of juicy
-                details about modern spycraft.”
-              </p>
-              <small className="credit">The Daily Telegraph </small>
-            </div>
+                    <div className="container translations">
 
-            <div className="praise" data-aos="fade-up">
-              <p>
-                "Dov Alfon, a former intelligence officer and the
-                editor-in-chief of an Israeli newspaper, knows about secrets and
-                how to tell stories. He doesn’t let his breathlessly exciting
-                debut to get out of hand."
-              </p>
-              <small className="credit">The London Times</small>
-            </div>
-
-            <div className="praise" data-aos="fade-up">
-              <p>
-                "A genuinely thrilling espionage novel... a brilliantly
-                choreographed dance macabre."
-              </p>
-              <small className="credit">The Mail on Sunday</small>
-            </div>
-
-            <div className="praise" data-aos="fade-up">
-              <p>"a timely addition to the canon."</p>
-              <small className="credit">Financial Times</small>
-            </div>
-            <div className="praise" data-aos="fade-up">
-              <p>
-                "slickly plotted with great action and wry humour. Alfon is an
-                ex-spook and it shows"
-              </p>
-              <small className="credit">The Sun</small>
-            </div>
-
-            <div className="praise" data-aos="fade-up">
-              <p>
-                "There are some terrific action sequences in this fiendishly
-                complicated yet pacey thriller."
-              </p>
-              <small className="credit">The Guardian</small>
-            </div>
-
-            <div className="praise" data-aos="fade-up">
-              <p>
-                "A Long Night in Paris is one of the most enjoyable action spy
-                thrillers I’ve read in a long time."
-              </p>
-              <small className="credit">New Books Magazine</small>
-            </div>
-
-            <div className="praise" data-aos="fade-up">
-              <p>
-                "Compulsively readable. The insights into the technology
-                available to spies today is enlightening."
-              </p>
-              <small className="credit">Crime Time</small>
-            </div>
-          </div>
-          <div className="container translations">
             <div className="flip-container book">
               <div className="flip">
                 <div
@@ -304,6 +234,79 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <div className="praises">
+            <div className="praise" data-aos="fade-up">
+              <p>
+                “Stellar debut...Alfon has created a mesmerizingly real world.
+                Fans of espionage thrillers will hope to see a lot more from
+                this talented author”
+              </p>
+              <small className="credit">Publishers Weekly</small>
+            </div>
+            <div className="praise" data-aos="fade-up">
+              <p>
+                “A deeply enjoyable espionage thriller with plenty of juicy
+                details about modern spycraft.”
+              </p>
+              <small className="credit">The Daily Telegraph </small>
+            </div>
+
+            <div className="praise" data-aos="fade-up">
+              <p>
+                "Dov Alfon, a former intelligence officer and the
+                editor-in-chief of an Israeli newspaper, knows about secrets and
+                how to tell stories. He doesn’t let his breathlessly exciting
+                debut to get out of hand."
+              </p>
+              <small className="credit">The London Times</small>
+            </div>
+
+            <div className="praise" data-aos="fade-up">
+              <p>
+                "A genuinely thrilling espionage novel... a brilliantly
+                choreographed dance macabre."
+              </p>
+              <small className="credit">The Mail on Sunday</small>
+            </div>
+
+            <div className="praise" data-aos="fade-up">
+              <p>"a timely addition to the canon."</p>
+              <small className="credit">Financial Times</small>
+            </div>
+            <div className="praise" data-aos="fade-up">
+              <p>
+                "slickly plotted with great action and wry humour. Alfon is an
+                ex-spook and it shows"
+              </p>
+              <small className="credit">The Sun</small>
+            </div>
+
+            <div className="praise" data-aos="fade-up">
+              <p>
+                "There are some terrific action sequences in this fiendishly
+                complicated yet pacey thriller."
+              </p>
+              <small className="credit">The Guardian</small>
+            </div>
+
+            <div className="praise" data-aos="fade-up">
+              <p>
+                "A Long Night in Paris is one of the most enjoyable action spy
+                thrillers I’ve read in a long time."
+              </p>
+              <small className="credit">New Books Magazine</small>
+            </div>
+
+            <div className="praise" data-aos="fade-up">
+              <p>
+                "Compulsively readable. The insights into the technology
+                available to spies today is enlightening."
+              </p>
+              <small className="credit">Crime Time</small>
+            </div>
+          </div>
+
+
         </div>
       </React.Fragment>
     );
